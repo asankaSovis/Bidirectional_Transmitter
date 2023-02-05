@@ -1,0 +1,76 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Sat Dec 17 15:31:40 2022
+| Host         : Akash-PC running 64-bit major release  (build 9200)
+| Command      : report_drc -file Bidirectional_Transmitter_wrapper_drc_routed.rpt -pb Bidirectional_Transmitter_wrapper_drc_routed.pb -rpx Bidirectional_Transmitter_wrapper_drc_routed.rpx
+| Design       : Bidirectional_Transmitter_wrapper
+| Device       : xc7z007sclg400-1
+| Speed File   : -1
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 8
++----------+----------+-------------------+------------+
+| Rule     | Severity | Description       | Violations |
++----------+----------+-------------------+------------+
+| PDRC-153 | Warning  | Gated clock check | 8          |
++----------+----------+-------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PDRC-153#1 Warning
+Gated clock check  
+Net Bidirectional_Transmitter_i/UART_Transmitter_0/inst/data_reg[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Bidirectional_Transmitter_i/UART_Transmitter_0/inst/data_reg[0]_LDC_i_1/O, cell Bidirectional_Transmitter_i/UART_Transmitter_0/inst/data_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net Bidirectional_Transmitter_i/UART_Transmitter_0/inst/data_reg[1]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Bidirectional_Transmitter_i/UART_Transmitter_0/inst/data_reg[1]_LDC_i_1/O, cell Bidirectional_Transmitter_i/UART_Transmitter_0/inst/data_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net Bidirectional_Transmitter_i/UART_Transmitter_0/inst/data_reg[2]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Bidirectional_Transmitter_i/UART_Transmitter_0/inst/data_reg[2]_LDC_i_1/O, cell Bidirectional_Transmitter_i/UART_Transmitter_0/inst/data_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#4 Warning
+Gated clock check  
+Net Bidirectional_Transmitter_i/UART_Transmitter_0/inst/data_reg[3]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Bidirectional_Transmitter_i/UART_Transmitter_0/inst/data_reg[3]_LDC_i_1/O, cell Bidirectional_Transmitter_i/UART_Transmitter_0/inst/data_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#5 Warning
+Gated clock check  
+Net Bidirectional_Transmitter_i/UART_Transmitter_0/inst/data_reg[4]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Bidirectional_Transmitter_i/UART_Transmitter_0/inst/data_reg[4]_LDC_i_1/O, cell Bidirectional_Transmitter_i/UART_Transmitter_0/inst/data_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#6 Warning
+Gated clock check  
+Net Bidirectional_Transmitter_i/UART_Transmitter_0/inst/data_reg[5]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Bidirectional_Transmitter_i/UART_Transmitter_0/inst/data_reg[5]_LDC_i_1/O, cell Bidirectional_Transmitter_i/UART_Transmitter_0/inst/data_reg[5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#7 Warning
+Gated clock check  
+Net Bidirectional_Transmitter_i/UART_Transmitter_0/inst/data_reg[6]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Bidirectional_Transmitter_i/UART_Transmitter_0/inst/data_reg[6]_LDC_i_1/O, cell Bidirectional_Transmitter_i/UART_Transmitter_0/inst/data_reg[6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#8 Warning
+Gated clock check  
+Net Bidirectional_Transmitter_i/UART_Transmitter_0/inst/data_reg[7]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Bidirectional_Transmitter_i/UART_Transmitter_0/inst/data_reg[7]_LDC_i_1/O, cell Bidirectional_Transmitter_i/UART_Transmitter_0/inst/data_reg[7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+

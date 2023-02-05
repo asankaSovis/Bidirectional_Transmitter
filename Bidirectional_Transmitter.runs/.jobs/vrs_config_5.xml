@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="Bidirectional_Transmitter_axi_gpio_0_0_synth_1" LaunchDir="C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/Bidirectional_Transmitter_axi_gpio_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Bidirectional_Transmitter_UART_Reciever_0_0_synth_1" LaunchDir="C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/Bidirectional_Transmitter_UART_Reciever_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

@@ -1,0 +1,920 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Dec 17 10:07:23 2022
+# Process ID: 8876
+# Current directory: C:/Xilinx/projects/Bidirectional_Transmitter
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2460 C:\Xilinx\projects\Bidirectional_Transmitter\Bidirectional_Transmitter.xpr
+# Log file: C:/Xilinx/projects/Bidirectional_Transmitter/vivado.log
+# Journal file: C:/Xilinx/projects/Bidirectional_Transmitter\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 891.758 ; gain = 198.793
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 7
+WARNING: [BD 41-927] Following properties on pin /UART_Transmitter_0/int_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /xadc_wiz_0/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /UART_Reciever_0/int_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/sim/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hdl/Bidirectional_Transmitter_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Transmitter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Reciever_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block gpio_parse_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xadc_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/ip/Bidirectional_Transmitter_auto_pc_0/Bidirectional_Transmitter_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter.hwh
+Generated Block Design Tcl file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter_bd.tcl
+Generated Hardware Definition File C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP Bidirectional_Transmitter_auto_pc_0, cache-ID = ecea0249ad5cfe19; cache size = 4.844 MB.
+[Sat Dec 17 10:08:22 2022] Launched Bidirectional_Transmitter_UART_Reciever_0_0_synth_1, synth_1...
+Run output will be captured here:
+Bidirectional_Transmitter_UART_Reciever_0_0_synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/Bidirectional_Transmitter_UART_Reciever_0_0_synth_1/runme.log
+synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/runme.log
+[Sat Dec 17 10:08:23 2022] Launched impl_1...
+Run output will be captured here: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:06 ; elapsed = 00:00:22 . Memory (MB): peak = 1081.973 ; gain = 153.617
+file copy -force C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/Bidirectional_Transmitter_wrapper.sysdef C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.sdk/Bidirectional_Transmitter_wrapper.hdf
+
+launch_sdk -workspace C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.sdk -hwspec C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.sdk/Bidirectional_Transmitter_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.sdk -hwspec C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.sdk/Bidirectional_Transmitter_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+open_bd_design {C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding cell -- xilinx.com:module_ref:UART_Transmitter:1.0 - UART_Transmitter_0
+Adding cell -- xilinx.com:ip:xadc_wiz:3.3 - xadc_wiz_0
+Adding cell -- xilinx.com:module_ref:gpio_parse:1.0 - gpio_parse_0
+Adding cell -- xilinx.com:module_ref:UART_Reciever:1.0 - UART_Reciever_0
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <Bidirectional_Transmitter> from BD file <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd>
+open_bd_design: Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 1242.730 ; gain = 76.191
+startgroup
+set_property -dict [list CONFIG.C_INTERRUPT_PRESENT {1}] [get_bd_cells axi_gpio_0]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0
+endgroup
+delete_bd_objs [get_bd_nets processing_system7_0_IRQ_P2F_UART0]
+connect_bd_net [get_bd_pins xlconcat_0/dout] [get_bd_pins processing_system7_0/IRQ_F2P]
+connect_bd_net [get_bd_pins processing_system7_0/IRQ_P2F_UART0] [get_bd_pins xlconcat_0/In1]
+connect_bd_net [get_bd_pins axi_gpio_0/ip2intc_irpt] [get_bd_pins xlconcat_0/In0]
+regenerate_bd_layout
+save_bd_design
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/ui/bd_b6017575.ui> 
+generate_target all [get_files  C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd]
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+WARNING: [BD 41-927] Following properties on pin /UART_Transmitter_0/int_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /xadc_wiz_0/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /UART_Reciever_0/int_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/sim/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hdl/Bidirectional_Transmitter_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Transmitter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Reciever_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block gpio_parse_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xadc_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/ip/Bidirectional_Transmitter_auto_pc_0/Bidirectional_Transmitter_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter.hwh
+Generated Block Design Tcl file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter_bd.tcl
+Generated Hardware Definition File C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.hwdef
+generate_target: Time (s): cpu = 00:00:11 ; elapsed = 00:00:31 . Memory (MB): peak = 1392.160 ; gain = 123.332
+catch { config_ip_cache -export [get_ips -all Bidirectional_Transmitter_processing_system7_0_0] }
+catch { config_ip_cache -export [get_ips -all Bidirectional_Transmitter_axi_gpio_0_0] }
+catch { config_ip_cache -export [get_ips -all Bidirectional_Transmitter_xlconcat_0_0] }
+catch { config_ip_cache -export [get_ips -all Bidirectional_Transmitter_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP Bidirectional_Transmitter_auto_pc_0, cache-ID = ecea0249ad5cfe19; cache size = 4.844 MB.
+export_ip_user_files -of_objects [get_files C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd]
+launch_runs -jobs 7 {Bidirectional_Transmitter_processing_system7_0_0_synth_1 Bidirectional_Transmitter_axi_gpio_0_0_synth_1 Bidirectional_Transmitter_xlconcat_0_0_synth_1}
+[Sat Dec 17 10:18:09 2022] Launched Bidirectional_Transmitter_processing_system7_0_0_synth_1, Bidirectional_Transmitter_axi_gpio_0_0_synth_1, Bidirectional_Transmitter_xlconcat_0_0_synth_1...
+Run output will be captured here:
+Bidirectional_Transmitter_processing_system7_0_0_synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/Bidirectional_Transmitter_processing_system7_0_0_synth_1/runme.log
+Bidirectional_Transmitter_axi_gpio_0_0_synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/Bidirectional_Transmitter_axi_gpio_0_0_synth_1/runme.log
+Bidirectional_Transmitter_xlconcat_0_0_synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/Bidirectional_Transmitter_xlconcat_0_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd] -directory C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.ip_user_files/sim_scripts -ip_user_files_dir C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.ip_user_files -ipstatic_source_dir C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.cache/compile_simlib/modelsim} {questa=C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.cache/compile_simlib/questa} {riviera=C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.cache/compile_simlib/riviera} {activehdl=C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+validate_bd_design -force
+WARNING: [BD 41-927] Following properties on pin /UART_Transmitter_0/int_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /xadc_wiz_0/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /UART_Reciever_0/int_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+save_bd_design
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/ui/bd_b6017575.ui> 
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 7
+INFO: [BD 41-1662] The design 'Bidirectional_Transmitter.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/sim/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hdl/Bidirectional_Transmitter_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Transmitter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Reciever_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block gpio_parse_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xadc_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/ip/Bidirectional_Transmitter_auto_pc_0/Bidirectional_Transmitter_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter.hwh
+Generated Block Design Tcl file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter_bd.tcl
+Generated Hardware Definition File C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP Bidirectional_Transmitter_auto_pc_0, cache-ID = ecea0249ad5cfe19; cache size = 4.844 MB.
+[Sat Dec 17 10:19:00 2022] Launched Bidirectional_Transmitter_processing_system7_0_0_synth_1, Bidirectional_Transmitter_axi_gpio_0_0_synth_1, Bidirectional_Transmitter_xlconcat_0_0_synth_1, synth_1...
+Run output will be captured here:
+Bidirectional_Transmitter_processing_system7_0_0_synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/Bidirectional_Transmitter_processing_system7_0_0_synth_1/runme.log
+Bidirectional_Transmitter_axi_gpio_0_0_synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/Bidirectional_Transmitter_axi_gpio_0_0_synth_1/runme.log
+Bidirectional_Transmitter_xlconcat_0_0_synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/Bidirectional_Transmitter_xlconcat_0_0_synth_1/runme.log
+synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/runme.log
+[Sat Dec 17 10:19:00 2022] Launched impl_1...
+Run output will be captured here: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 1445.852 ; gain = 36.961
+file copy -force C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/Bidirectional_Transmitter_wrapper.sysdef C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.sdk/Bidirectional_Transmitter_wrapper.hdf
+
+update_module_reference Bidirectional_Transmitter_UART_Reciever_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'int_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'int_clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd'
+INFO: [IP_Flow 19-1972] Upgraded Bidirectional_Transmitter_UART_Reciever_0_0 from UART_Reciever_v1_0 1.0 to UART_Reciever_v1_0 1.0
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 7
+WARNING: [BD 41-927] Following properties on pin /UART_Transmitter_0/int_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /xadc_wiz_0/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/sim/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hdl/Bidirectional_Transmitter_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Transmitter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Reciever_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block gpio_parse_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xadc_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/ip/Bidirectional_Transmitter_auto_pc_0/Bidirectional_Transmitter_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter.hwh
+Generated Block Design Tcl file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter_bd.tcl
+Generated Hardware Definition File C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP Bidirectional_Transmitter_auto_pc_0, cache-ID = ecea0249ad5cfe19; cache size = 6.173 MB.
+[Sat Dec 17 10:40:55 2022] Launched Bidirectional_Transmitter_UART_Reciever_0_0_synth_1, synth_1...
+Run output will be captured here:
+Bidirectional_Transmitter_UART_Reciever_0_0_synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/Bidirectional_Transmitter_UART_Reciever_0_0_synth_1/runme.log
+synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/runme.log
+[Sat Dec 17 10:40:56 2022] Launched impl_1...
+Run output will be captured here: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 1581.125 ; gain = 29.973
+file copy -force C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/Bidirectional_Transmitter_wrapper.sysdef C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.sdk/Bidirectional_Transmitter_wrapper.hdf
+
+update_module_reference Bidirectional_Transmitter_UART_Reciever_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'int_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'int_clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd'
+INFO: [IP_Flow 19-1972] Upgraded Bidirectional_Transmitter_UART_Reciever_0_0 from UART_Reciever_v1_0 1.0 to UART_Reciever_v1_0 1.0
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+update_module_reference Bidirectional_Transmitter_UART_Reciever_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'int_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'int_clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd'
+INFO: [IP_Flow 19-1972] Upgraded Bidirectional_Transmitter_UART_Reciever_0_0 from UART_Reciever_v1_0 1.0 to UART_Reciever_v1_0 1.0
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 7
+WARNING: [BD 41-927] Following properties on pin /UART_Transmitter_0/int_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /xadc_wiz_0/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/sim/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hdl/Bidirectional_Transmitter_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Transmitter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Reciever_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block gpio_parse_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xadc_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/ip/Bidirectional_Transmitter_auto_pc_0/Bidirectional_Transmitter_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter.hwh
+Generated Block Design Tcl file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter_bd.tcl
+Generated Hardware Definition File C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP Bidirectional_Transmitter_auto_pc_0, cache-ID = ecea0249ad5cfe19; cache size = 6.173 MB.
+[Sat Dec 17 10:50:24 2022] Launched Bidirectional_Transmitter_UART_Reciever_0_0_synth_1, synth_1...
+Run output will be captured here:
+Bidirectional_Transmitter_UART_Reciever_0_0_synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/Bidirectional_Transmitter_UART_Reciever_0_0_synth_1/runme.log
+synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/runme.log
+[Sat Dec 17 10:50:24 2022] Launched impl_1...
+Run output will be captured here: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 1621.137 ; gain = 37.078
+file copy -force C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/Bidirectional_Transmitter_wrapper.sysdef C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.sdk/Bidirectional_Transmitter_wrapper.hdf
+
+update_module_reference Bidirectional_Transmitter_UART_Reciever_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'int_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'int_clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd'
+INFO: [IP_Flow 19-1972] Upgraded Bidirectional_Transmitter_UART_Reciever_0_0 from UART_Reciever_v1_0 1.0 to UART_Reciever_v1_0 1.0
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 7
+WARNING: [BD 41-927] Following properties on pin /UART_Transmitter_0/int_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /xadc_wiz_0/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/sim/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hdl/Bidirectional_Transmitter_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Transmitter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Reciever_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block gpio_parse_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xadc_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/ip/Bidirectional_Transmitter_auto_pc_0/Bidirectional_Transmitter_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter.hwh
+Generated Block Design Tcl file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter_bd.tcl
+Generated Hardware Definition File C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP Bidirectional_Transmitter_auto_pc_0, cache-ID = ecea0249ad5cfe19; cache size = 6.173 MB.
+[Sat Dec 17 10:57:21 2022] Launched Bidirectional_Transmitter_UART_Reciever_0_0_synth_1, synth_1...
+Run output will be captured here:
+Bidirectional_Transmitter_UART_Reciever_0_0_synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/Bidirectional_Transmitter_UART_Reciever_0_0_synth_1/runme.log
+synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/runme.log
+[Sat Dec 17 10:57:21 2022] Launched impl_1...
+Run output will be captured here: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 1702.918 ; gain = 44.328
+file copy -force C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/Bidirectional_Transmitter_wrapper.sysdef C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.sdk/Bidirectional_Transmitter_wrapper.hdf
+
+update_module_reference Bidirectional_Transmitter_UART_Reciever_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'int_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'int_clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd'
+INFO: [IP_Flow 19-1972] Upgraded Bidirectional_Transmitter_UART_Reciever_0_0 from UART_Reciever_v1_0 1.0 to UART_Reciever_v1_0 1.0
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 7
+WARNING: [BD 41-927] Following properties on pin /UART_Transmitter_0/int_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /xadc_wiz_0/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/sim/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hdl/Bidirectional_Transmitter_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Transmitter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Reciever_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block gpio_parse_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xadc_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/ip/Bidirectional_Transmitter_auto_pc_0/Bidirectional_Transmitter_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter.hwh
+Generated Block Design Tcl file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter_bd.tcl
+Generated Hardware Definition File C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP Bidirectional_Transmitter_auto_pc_0, cache-ID = ecea0249ad5cfe19; cache size = 6.173 MB.
+[Sat Dec 17 11:06:51 2022] Launched Bidirectional_Transmitter_UART_Reciever_0_0_synth_1, synth_1...
+Run output will be captured here:
+Bidirectional_Transmitter_UART_Reciever_0_0_synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/Bidirectional_Transmitter_UART_Reciever_0_0_synth_1/runme.log
+synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/runme.log
+[Sat Dec 17 11:06:52 2022] Launched impl_1...
+Run output will be captured here: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 1748.535 ; gain = 41.590
+file copy -force C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/Bidirectional_Transmitter_wrapper.sysdef C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.sdk/Bidirectional_Transmitter_wrapper.hdf
+
+update_module_reference Bidirectional_Transmitter_UART_Reciever_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'int_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'int_clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd'
+INFO: [IP_Flow 19-1972] Upgraded Bidirectional_Transmitter_UART_Reciever_0_0 from UART_Reciever_v1_0 1.0 to UART_Reciever_v1_0 1.0
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 7
+WARNING: [BD 41-927] Following properties on pin /UART_Transmitter_0/int_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /xadc_wiz_0/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/sim/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hdl/Bidirectional_Transmitter_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Transmitter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Reciever_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block gpio_parse_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xadc_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/ip/Bidirectional_Transmitter_auto_pc_0/Bidirectional_Transmitter_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter.hwh
+Generated Block Design Tcl file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter_bd.tcl
+Generated Hardware Definition File C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP Bidirectional_Transmitter_auto_pc_0, cache-ID = ecea0249ad5cfe19; cache size = 6.173 MB.
+[Sat Dec 17 11:19:26 2022] Launched Bidirectional_Transmitter_UART_Reciever_0_0_synth_1, synth_1...
+Run output will be captured here:
+Bidirectional_Transmitter_UART_Reciever_0_0_synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/Bidirectional_Transmitter_UART_Reciever_0_0_synth_1/runme.log
+synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/runme.log
+[Sat Dec 17 11:19:26 2022] Launched impl_1...
+Run output will be captured here: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 1886.031 ; gain = 42.156
+file copy -force C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/Bidirectional_Transmitter_wrapper.sysdef C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.sdk/Bidirectional_Transmitter_wrapper.hdf
+
+update_module_reference Bidirectional_Transmitter_UART_Reciever_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'int_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'int_clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd'
+INFO: [IP_Flow 19-1972] Upgraded Bidirectional_Transmitter_UART_Reciever_0_0 from UART_Reciever_v1_0 1.0 to UART_Reciever_v1_0 1.0
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 7
+WARNING: [BD 41-927] Following properties on pin /UART_Transmitter_0/int_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /xadc_wiz_0/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/sim/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hdl/Bidirectional_Transmitter_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Transmitter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Reciever_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block gpio_parse_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xadc_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/ip/Bidirectional_Transmitter_auto_pc_0/Bidirectional_Transmitter_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter.hwh
+Generated Block Design Tcl file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter_bd.tcl
+Generated Hardware Definition File C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP Bidirectional_Transmitter_auto_pc_0, cache-ID = ecea0249ad5cfe19; cache size = 6.173 MB.
+[Sat Dec 17 11:26:40 2022] Launched Bidirectional_Transmitter_UART_Reciever_0_0_synth_1, synth_1...
+Run output will be captured here:
+Bidirectional_Transmitter_UART_Reciever_0_0_synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/Bidirectional_Transmitter_UART_Reciever_0_0_synth_1/runme.log
+synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/runme.log
+[Sat Dec 17 11:26:41 2022] Launched impl_1...
+Run output will be captured here: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 1930.652 ; gain = 40.859
+file copy -force C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/Bidirectional_Transmitter_wrapper.sysdef C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.sdk/Bidirectional_Transmitter_wrapper.hdf
+
+update_module_reference Bidirectional_Transmitter_UART_Reciever_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'int_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'int_clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd'
+INFO: [IP_Flow 19-1972] Upgraded Bidirectional_Transmitter_UART_Reciever_0_0 from UART_Reciever_v1_0 1.0 to UART_Reciever_v1_0 1.0
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 7
+WARNING: [BD 41-927] Following properties on pin /UART_Transmitter_0/int_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /xadc_wiz_0/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/sim/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hdl/Bidirectional_Transmitter_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Transmitter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Reciever_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block gpio_parse_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xadc_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/ip/Bidirectional_Transmitter_auto_pc_0/Bidirectional_Transmitter_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter.hwh
+Generated Block Design Tcl file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter_bd.tcl
+Generated Hardware Definition File C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP Bidirectional_Transmitter_auto_pc_0, cache-ID = ecea0249ad5cfe19; cache size = 6.173 MB.
+[Sat Dec 17 11:33:52 2022] Launched Bidirectional_Transmitter_UART_Reciever_0_0_synth_1, synth_1...
+Run output will be captured here:
+Bidirectional_Transmitter_UART_Reciever_0_0_synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/Bidirectional_Transmitter_UART_Reciever_0_0_synth_1/runme.log
+synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/runme.log
+[Sat Dec 17 11:33:52 2022] Launched impl_1...
+Run output will be captured here: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 1974.902 ; gain = 40.535
+file copy -force C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/Bidirectional_Transmitter_wrapper.sysdef C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.sdk/Bidirectional_Transmitter_wrapper.hdf
+
+update_module_reference Bidirectional_Transmitter_UART_Reciever_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'int_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'int_clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd'
+INFO: [IP_Flow 19-1972] Upgraded Bidirectional_Transmitter_UART_Reciever_0_0 from UART_Reciever_v1_0 1.0 to UART_Reciever_v1_0 1.0
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 7
+WARNING: [BD 41-927] Following properties on pin /UART_Transmitter_0/int_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /xadc_wiz_0/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/sim/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hdl/Bidirectional_Transmitter_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Transmitter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Reciever_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block gpio_parse_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xadc_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/ip/Bidirectional_Transmitter_auto_pc_0/Bidirectional_Transmitter_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter.hwh
+Generated Block Design Tcl file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter_bd.tcl
+Generated Hardware Definition File C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP Bidirectional_Transmitter_auto_pc_0, cache-ID = ecea0249ad5cfe19; cache size = 6.173 MB.
+[Sat Dec 17 11:40:12 2022] Launched Bidirectional_Transmitter_UART_Reciever_0_0_synth_1, synth_1...
+Run output will be captured here:
+Bidirectional_Transmitter_UART_Reciever_0_0_synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/Bidirectional_Transmitter_UART_Reciever_0_0_synth_1/runme.log
+synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/runme.log
+[Sat Dec 17 11:40:12 2022] Launched impl_1...
+Run output will be captured here: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 2020.961 ; gain = 42.328
+file copy -force C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/Bidirectional_Transmitter_wrapper.sysdef C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.sdk/Bidirectional_Transmitter_wrapper.hdf
+
+update_module_reference Bidirectional_Transmitter_UART_Reciever_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'int_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'int_clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd'
+INFO: [IP_Flow 19-1972] Upgraded Bidirectional_Transmitter_UART_Reciever_0_0 from UART_Reciever_v1_0 1.0 to UART_Reciever_v1_0 1.0
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+update_module_reference Bidirectional_Transmitter_UART_Reciever_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'int_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'int_clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd'
+INFO: [IP_Flow 19-1972] Upgraded Bidirectional_Transmitter_UART_Reciever_0_0 from UART_Reciever_v1_0 1.0 to UART_Reciever_v1_0 1.0
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 7
+WARNING: [BD 41-927] Following properties on pin /UART_Transmitter_0/int_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /xadc_wiz_0/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/sim/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hdl/Bidirectional_Transmitter_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Transmitter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Reciever_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block gpio_parse_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xadc_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/ip/Bidirectional_Transmitter_auto_pc_0/Bidirectional_Transmitter_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter.hwh
+Generated Block Design Tcl file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter_bd.tcl
+Generated Hardware Definition File C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP Bidirectional_Transmitter_auto_pc_0, cache-ID = ecea0249ad5cfe19; cache size = 6.173 MB.
+[Sat Dec 17 11:47:27 2022] Launched Bidirectional_Transmitter_UART_Reciever_0_0_synth_1, synth_1...
+Run output will be captured here:
+Bidirectional_Transmitter_UART_Reciever_0_0_synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/Bidirectional_Transmitter_UART_Reciever_0_0_synth_1/runme.log
+synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/runme.log
+[Sat Dec 17 11:47:28 2022] Launched impl_1...
+Run output will be captured here: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 2068.184 ; gain = 43.250
+file copy -force C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/Bidirectional_Transmitter_wrapper.sysdef C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.sdk/Bidirectional_Transmitter_wrapper.hdf
+
+update_module_reference Bidirectional_Transmitter_UART_Reciever_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'int_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'int_clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd'
+INFO: [IP_Flow 19-1972] Upgraded Bidirectional_Transmitter_UART_Reciever_0_0 from UART_Reciever_v1_0 1.0 to UART_Reciever_v1_0 1.0
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 7
+WARNING: [BD 41-927] Following properties on pin /UART_Transmitter_0/int_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /xadc_wiz_0/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/sim/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hdl/Bidirectional_Transmitter_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Transmitter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Reciever_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block gpio_parse_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xadc_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/ip/Bidirectional_Transmitter_auto_pc_0/Bidirectional_Transmitter_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter.hwh
+Generated Block Design Tcl file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter_bd.tcl
+Generated Hardware Definition File C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP Bidirectional_Transmitter_auto_pc_0, cache-ID = ecea0249ad5cfe19; cache size = 6.173 MB.
+[Sat Dec 17 11:56:13 2022] Launched Bidirectional_Transmitter_UART_Reciever_0_0_synth_1, synth_1...
+Run output will be captured here:
+Bidirectional_Transmitter_UART_Reciever_0_0_synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/Bidirectional_Transmitter_UART_Reciever_0_0_synth_1/runme.log
+synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/runme.log
+[Sat Dec 17 11:56:13 2022] Launched impl_1...
+Run output will be captured here: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 2114.375 ; gain = 42.660
+file copy -force C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/Bidirectional_Transmitter_wrapper.sysdef C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.sdk/Bidirectional_Transmitter_wrapper.hdf
+
+CRITICAL WARNING: [HDL 9-806] Syntax error near "end". [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/new/UART_Reciever.v:58]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "end". [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/new/UART_Reciever.v:58]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "end". [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/new/UART_Reciever.v:58]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "end". [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/new/UART_Reciever.v:58]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "end". [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/new/UART_Reciever.v:58]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "end". [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/new/UART_Reciever.v:58]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "end". [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/new/UART_Reciever.v:58]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "end". [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/new/UART_Reciever.v:58]
+update_module_reference Bidirectional_Transmitter_UART_Reciever_0_0
+CRITICAL WARNING: [HDL 9-806] Syntax error near "end". [c:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/new/UART_Reciever.v:58]
+ERROR: [IP_Flow 19-259] [HDL Parser] Failed analyze operation while parsing HDL.
+ERROR: [IP_Flow 19-258] [HDL Parser] Error parsing HDL file '../../../new/UART_Reciever.v'.
+WARNING: [IP_Flow 19-378] There are no ports found from top-level file 'c:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/new/UART_Reciever.v'.
+ERROR: [IP_Flow 19-4668] Failed to infer definition from module 'UART_Reciever'.
+ERROR: [Common 17-39] 'update_module_reference' failed due to earlier errors.
+update_module_reference Bidirectional_Transmitter_UART_Reciever_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'int_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'int_clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd'
+INFO: [IP_Flow 19-1972] Upgraded Bidirectional_Transmitter_UART_Reciever_0_0 from UART_Reciever_v1_0 1.0 to UART_Reciever_v1_0 1.0
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 7
+WARNING: [BD 41-927] Following properties on pin /UART_Transmitter_0/int_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /xadc_wiz_0/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/sim/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hdl/Bidirectional_Transmitter_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Transmitter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Reciever_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block gpio_parse_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xadc_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/ip/Bidirectional_Transmitter_auto_pc_0/Bidirectional_Transmitter_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter.hwh
+Generated Block Design Tcl file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter_bd.tcl
+Generated Hardware Definition File C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP Bidirectional_Transmitter_auto_pc_0, cache-ID = ecea0249ad5cfe19; cache size = 6.173 MB.
+[Sat Dec 17 12:04:07 2022] Launched Bidirectional_Transmitter_UART_Reciever_0_0_synth_1, synth_1...
+Run output will be captured here:
+Bidirectional_Transmitter_UART_Reciever_0_0_synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/Bidirectional_Transmitter_UART_Reciever_0_0_synth_1/runme.log
+synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/runme.log
+[Sat Dec 17 12:04:07 2022] Launched impl_1...
+Run output will be captured here: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 2165.781 ; gain = 47.727
+file copy -force C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/Bidirectional_Transmitter_wrapper.sysdef C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.sdk/Bidirectional_Transmitter_wrapper.hdf
+
+update_module_reference Bidirectional_Transmitter_UART_Reciever_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'int_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'int_clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd'
+INFO: [IP_Flow 19-1972] Upgraded Bidirectional_Transmitter_UART_Reciever_0_0 from UART_Reciever_v1_0 1.0 to UART_Reciever_v1_0 1.0
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+update_module_reference Bidirectional_Transmitter_UART_Reciever_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'int_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'int_clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd'
+INFO: [IP_Flow 19-1972] Upgraded Bidirectional_Transmitter_UART_Reciever_0_0 from UART_Reciever_v1_0 1.0 to UART_Reciever_v1_0 1.0
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 7
+WARNING: [BD 41-927] Following properties on pin /UART_Transmitter_0/int_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /xadc_wiz_0/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/sim/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hdl/Bidirectional_Transmitter_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Transmitter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Reciever_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block gpio_parse_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xadc_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/ip/Bidirectional_Transmitter_auto_pc_0/Bidirectional_Transmitter_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter.hwh
+Generated Block Design Tcl file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter_bd.tcl
+Generated Hardware Definition File C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP Bidirectional_Transmitter_auto_pc_0, cache-ID = ecea0249ad5cfe19; cache size = 6.173 MB.
+[Sat Dec 17 12:18:54 2022] Launched Bidirectional_Transmitter_UART_Reciever_0_0_synth_1, synth_1...
+Run output will be captured here:
+Bidirectional_Transmitter_UART_Reciever_0_0_synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/Bidirectional_Transmitter_UART_Reciever_0_0_synth_1/runme.log
+synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/runme.log
+[Sat Dec 17 12:18:54 2022] Launched impl_1...
+Run output will be captured here: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:03 ; elapsed = 00:00:13 . Memory (MB): peak = 2210.125 ; gain = 40.980
+file copy -force C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/Bidirectional_Transmitter_wrapper.sysdef C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.sdk/Bidirectional_Transmitter_wrapper.hdf
+
+update_module_reference Bidirectional_Transmitter_UART_Reciever_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'int_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'int_clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd'
+INFO: [IP_Flow 19-1972] Upgraded Bidirectional_Transmitter_UART_Reciever_0_0 from UART_Reciever_v1_0 1.0 to UART_Reciever_v1_0 1.0
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 7
+WARNING: [BD 41-927] Following properties on pin /UART_Transmitter_0/int_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /xadc_wiz_0/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/sim/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hdl/Bidirectional_Transmitter_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Transmitter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Reciever_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block gpio_parse_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xadc_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/ip/Bidirectional_Transmitter_auto_pc_0/Bidirectional_Transmitter_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter.hwh
+Generated Block Design Tcl file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter_bd.tcl
+Generated Hardware Definition File C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP Bidirectional_Transmitter_auto_pc_0, cache-ID = ecea0249ad5cfe19; cache size = 6.173 MB.
+[Sat Dec 17 12:50:01 2022] Launched Bidirectional_Transmitter_UART_Reciever_0_0_synth_1, synth_1...
+Run output will be captured here:
+Bidirectional_Transmitter_UART_Reciever_0_0_synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/Bidirectional_Transmitter_UART_Reciever_0_0_synth_1/runme.log
+synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/runme.log
+[Sat Dec 17 12:50:01 2022] Launched impl_1...
+Run output will be captured here: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:14 . Memory (MB): peak = 2256.977 ; gain = 43.156
+generate_target all [get_files  C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd]
+INFO: [BD 41-1637] Generated targets are already up-to-date for bd-design 'Bidirectional_Transmitter' - hence not re-generating.
+export_ip_user_files -of_objects [get_files C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd]
+launch_runs -jobs 7 Bidirectional_Transmitter_UART_Reciever_0_0_synth_1
+[Sat Dec 17 13:35:55 2022] Launched Bidirectional_Transmitter_UART_Reciever_0_0_synth_1...
+Run output will be captured here: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/Bidirectional_Transmitter_UART_Reciever_0_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd] -directory C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.ip_user_files/sim_scripts -ip_user_files_dir C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.ip_user_files -ipstatic_source_dir C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.cache/compile_simlib/modelsim} {questa=C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.cache/compile_simlib/questa} {riviera=C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.cache/compile_simlib/riviera} {activehdl=C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+regenerate_bd_layout
+validate_bd_design -force
+WARNING: [BD 41-927] Following properties on pin /UART_Transmitter_0/int_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /xadc_wiz_0/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+update_module_reference Bidirectional_Transmitter_UART_Reciever_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'int_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'int_clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd'
+INFO: [IP_Flow 19-1972] Upgraded Bidirectional_Transmitter_UART_Reciever_0_0 from UART_Reciever_v1_0 1.0 to UART_Reciever_v1_0 1.0
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+generate_target all [get_files  C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd]
+WARNING: [BD 41-927] Following properties on pin /UART_Transmitter_0/int_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /xadc_wiz_0/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/sim/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hdl/Bidirectional_Transmitter_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Transmitter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Reciever_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block gpio_parse_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xadc_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/ip/Bidirectional_Transmitter_auto_pc_0/Bidirectional_Transmitter_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter.hwh
+Generated Block Design Tcl file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter_bd.tcl
+Generated Hardware Definition File C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.hwdef
+catch { config_ip_cache -export [get_ips -all Bidirectional_Transmitter_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP Bidirectional_Transmitter_auto_pc_0, cache-ID = ecea0249ad5cfe19; cache size = 6.173 MB.
+export_ip_user_files -of_objects [get_files C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd]
+launch_runs -jobs 7 Bidirectional_Transmitter_UART_Reciever_0_0_synth_1
+[Sat Dec 17 13:37:20 2022] Launched Bidirectional_Transmitter_UART_Reciever_0_0_synth_1...
+Run output will be captured here: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/Bidirectional_Transmitter_UART_Reciever_0_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd] -directory C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.ip_user_files/sim_scripts -ip_user_files_dir C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.ip_user_files -ipstatic_source_dir C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.cache/compile_simlib/modelsim} {questa=C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.cache/compile_simlib/questa} {riviera=C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.cache/compile_simlib/riviera} {activehdl=C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 7
+[Sat Dec 17 13:37:43 2022] Launched Bidirectional_Transmitter_UART_Reciever_0_0_synth_1, synth_1...
+Run output will be captured here:
+Bidirectional_Transmitter_UART_Reciever_0_0_synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/Bidirectional_Transmitter_UART_Reciever_0_0_synth_1/runme.log
+synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/runme.log
+[Sat Dec 17 13:37:43 2022] Launched impl_1...
+Run output will be captured here: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/runme.log
+file copy -force C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/Bidirectional_Transmitter_wrapper.sysdef C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.sdk/Bidirectional_Transmitter_wrapper.hdf
+
+update_module_reference Bidirectional_Transmitter_UART_Reciever_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'int_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'int_clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd'
+INFO: [IP_Flow 19-1972] Upgraded Bidirectional_Transmitter_UART_Reciever_0_0 from UART_Reciever_v1_0 1.0 to UART_Reciever_v1_0 1.0
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 7
+WARNING: [BD 41-927] Following properties on pin /UART_Transmitter_0/int_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /xadc_wiz_0/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/sim/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hdl/Bidirectional_Transmitter_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Transmitter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Reciever_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block gpio_parse_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xadc_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/ip/Bidirectional_Transmitter_auto_pc_0/Bidirectional_Transmitter_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter.hwh
+Generated Block Design Tcl file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter_bd.tcl
+Generated Hardware Definition File C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP Bidirectional_Transmitter_auto_pc_0, cache-ID = ecea0249ad5cfe19; cache size = 6.173 MB.
+[Sat Dec 17 13:59:51 2022] Launched Bidirectional_Transmitter_UART_Reciever_0_0_synth_1, synth_1...
+Run output will be captured here:
+Bidirectional_Transmitter_UART_Reciever_0_0_synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/Bidirectional_Transmitter_UART_Reciever_0_0_synth_1/runme.log
+synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/runme.log
+[Sat Dec 17 13:59:51 2022] Launched impl_1...
+Run output will be captured here: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 2351.992 ; gain = 40.324
+file copy -force C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/Bidirectional_Transmitter_wrapper.sysdef C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.sdk/Bidirectional_Transmitter_wrapper.hdf
+
+update_module_reference Bidirectional_Transmitter_UART_Reciever_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'int_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'int_clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd'
+INFO: [IP_Flow 19-1972] Upgraded Bidirectional_Transmitter_UART_Reciever_0_0 from UART_Reciever_v1_0 1.0 to UART_Reciever_v1_0 1.0
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+update_module_reference Bidirectional_Transmitter_UART_Reciever_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'int_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'int_clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd'
+INFO: [IP_Flow 19-1972] Upgraded Bidirectional_Transmitter_UART_Reciever_0_0 from UART_Reciever_v1_0 1.0 to UART_Reciever_v1_0 1.0
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 7
+WARNING: [BD 41-927] Following properties on pin /UART_Transmitter_0/int_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /xadc_wiz_0/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0 
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/sim/Bidirectional_Transmitter.v
+VHDL Output written to : C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hdl/Bidirectional_Transmitter_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Transmitter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block UART_Reciever_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block gpio_parse_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xadc_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/ip/Bidirectional_Transmitter_auto_pc_0/Bidirectional_Transmitter_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter.hwh
+Generated Block Design Tcl file C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hw_handoff/Bidirectional_Transmitter_bd.tcl
+Generated Hardware Definition File C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP Bidirectional_Transmitter_auto_pc_0, cache-ID = ecea0249ad5cfe19; cache size = 6.173 MB.
+[Sat Dec 17 14:08:11 2022] Launched Bidirectional_Transmitter_UART_Reciever_0_0_synth_1, synth_1...
+Run output will be captured here:
+Bidirectional_Transmitter_UART_Reciever_0_0_synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/Bidirectional_Transmitter_UART_Reciever_0_0_synth_1/runme.log
+synth_1: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/runme.log
+[Sat Dec 17 14:08:11 2022] Launched impl_1...
+Run output will be captured here: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 2396.875 ; gain = 41.266
+file copy -force C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/impl_1/Bidirectional_Transmitter_wrapper.sysdef C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.sdk/Bidirectional_Transmitter_wrapper.hdf
+
+update_module_reference Bidirectional_Transmitter_UART_Reciever_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'int_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'int_clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd'
+INFO: [IP_Flow 19-1972] Upgraded Bidirectional_Transmitter_UART_Reciever_0_0 from UART_Reciever_v1_0 1.0 to UART_Reciever_v1_0 1.0
+Wrote  : <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd> 
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 17 14:26:35 2022...

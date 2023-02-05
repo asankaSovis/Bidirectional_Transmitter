@@ -1,0 +1,8 @@
+14:06:07 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+
+14:06:07 Build Finished (took 282ms)
+

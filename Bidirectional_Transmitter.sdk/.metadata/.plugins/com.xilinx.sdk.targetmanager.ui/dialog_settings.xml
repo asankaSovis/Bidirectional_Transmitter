@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="" key="Bidirectional_Transmitter_wrapper_hw_platform_0-bmmFile"/>
+	<item value="Local" key="Bidirectional_Transmitter_wrapper_hw_platform_0-target"/>
+	<item value="C:\Xilinx\projects\Bidirectional_Transmitter\Bidirectional_Transmitter.runs\impl_1\Bidirectional_Transmitter_wrapper.bit" key="Bidirectional_Transmitter_wrapper_hw_platform_0-bitFile"/>
+	<item value="Bidirectional_Transmitter_wrapper_hw_platform_0" key="programfpga.hwplatform"/>
+	<item value="Digilent Cora Z7 - 7007S 210370A92E88A/2-xc7z007s" key="Bidirectional_Transmitter_wrapper_hw_platform_0-device"/>
+	<item value="false" key="Bidirectional_Transmitter_wrapper_hw_platform_0-partial_bit"/>
+</section>

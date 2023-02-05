@@ -1,0 +1,35 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Feb  5 06:49:40 2023
+# Process ID: 13292
+# Current directory: C:/Xilinx/projects/Bidirectional_Transmitter
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4988 C:\Xilinx\projects\Bidirectional_Transmitter\Bidirectional_Transmitter.xpr
+# Log file: C:/Xilinx/projects/Bidirectional_Transmitter/vivado.log
+# Journal file: C:/Xilinx/projects/Bidirectional_Transmitter\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:44 . Memory (MB): peak = 896.625 ; gain = 190.414
+update_compile_order -fileset sources_1
+open_bd_design {C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding cell -- xilinx.com:ip:xadc_wiz:3.3 - xadc_wiz_0
+Adding cell -- xilinx.com:module_ref:gpio_parse:1.0 - gpio_parse_0
+Adding cell -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding cell -- xilinx.com:module_ref:UART_Transmitter:1.0 - UART_Transmitter_0
+Adding cell -- xilinx.com:module_ref:UART_Reciever:1.0 - UART_Reciever_0
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <Bidirectional_Transmitter> from BD file <C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd>
+open_bd_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:21 . Memory (MB): peak = 1005.227 ; gain = 88.227
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Feb  5 06:53:51 2023...

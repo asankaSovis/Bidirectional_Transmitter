@@ -1,0 +1,373 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xil_cache.h"
+#include "sleep.h"
+#include "xuartps.h"
+#include "xscugic.h"
+#include "xsysmon.h"
+
+#define INTC_DEVICE_ID        XPAR_SCUGIC_SINGLE_DEVICE_ID
+#define UART_INT_IRQ_ID       XPAR_XUARTPS_0_INTR
+
+#define XADC_DEVICE_ID XPAR_XADC_WIZ_0_DEVICE_ID
+
+#define XADC_SEQ_CHANNELS 0xB3630800
+#define XADC_CHANNELS 0xB3630008
+
+#define XADC_A1 25
+
+#define XADC_THRESHOLD 30000
+
+//////////////////////////////////
+
+#define INTC_GPIO_DEVICE_ID 				XPAR_PS7_SCUGIC_0_DEVICE_ID
+#define INTC_GPIO_INTERRUPT_ID 		XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR
+
+#define GPIO_INT						XGPIO_IR_CH2_MASK
+
+XScuGic INTCInst;
+
+/////////////////////////////////
+
+static XScuGic InterruptController;    /* Instance of the Interrupt Controller */
+
+int UartIntrInit(XScuGic *IntcInstPtr, XUartPs *UartInstPtr, u16 DeviceId, u16 UartIntrId);
+static int SetupInterruptSystem(XScuGic *IntcInstancePtr, XUartPs *UartInstancePtr, u16 UartIntrId);
+void UARTHandler(void *CallBackRef, u32 Event, unsigned int EventData);
+
+void Xadc_Init(XSysMon *InstancePtr, u32 DeviceId);
+u16 ReadData (XSysMon *InstancePtr);
+
+////////////////////////////////
+
+static void BTN_Intr_Handler(void *baseaddr_p);
+static int InterruptSystemSetup (XScuGic *XScuGicInstancePtr);
+static int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr);
+
+///////////////////////////////
+
+static u8 RecvBuffer[0];    /* Buffer for Receiving Data */
+
+XGpio my_gpio;
+XUartPs serial;
+XUartPs_Config *serialconfig;
+
+int uart_status;
+int gpio_status;
+
+u8 rx_data;
+
+u16 din_analog = 0;
+
+int main()
+{
+	init_platform();
+
+	serialconfig = XUartPs_LookupConfig(XPAR_XUARTPS_0_DEVICE_ID);
+	uart_status = XUartPs_CfgInitialize(&serial, serialconfig, serialconfig->BaseAddress);
+	XUartPs_SetBaudRate(&serial, 115200);
+
+	Xil_DCacheDisable();
+
+	gpio_status = XGpio_Initialize(&my_gpio, XPAR_AXI_GPIO_0_DEVICE_ID);
+
+	if (gpio_status != XST_SUCCESS){
+		return XST_FAILURE;
+	}
+
+	uart_status = UartIntrInit(&InterruptController, &serial, XPAR_XUARTPS_0_DEVICE_ID, UART_INT_IRQ_ID);
+
+	if (uart_status != XST_SUCCESS)
+	{
+		return XST_FAILURE;
+	}
+
+	XSysMon Xadc;
+	Xadc_Init(&Xadc, XADC_DEVICE_ID);
+
+	////////////////////////////////////
+
+	// Initialize interrupt controller
+	gpio_status = IntcInitFunction(XPAR_AXI_GPIO_0_DEVICE_ID, &my_gpio);
+	if(gpio_status = XST_SUCCESS)
+		return XST_FAILURE;
+
+	///////////////////////////////////////
+
+	int loop_count = 0;
+
+	while(1) {
+		//u32 TrxBuffer = XGpio_DiscreteRead(&my_gpio, 2);
+
+		//if (TrxBuffer >> 8) {
+			//printf("Analog Input: %d\r\n", din_analog);
+
+			//XUartPs_Send(&serial, &TrxBuffer, 1);
+			//usleep(100);
+		//}
+
+		//if (loop_count == 100) {
+		u16 RawData = 0;
+
+			XSysMon_GetStatus(Xadc);
+
+			while ((XSysMon_GetStatus(Xadc) & XSM_SR_EOS_MASK) != XSM_SR_EOS_MASK);
+
+			if (((1 << XADC_A1) & XADC_CHANNELS) != 0) {
+				RawData = XSysMon_GetAdcData(Xadc, XADC_A1);
+			}
+
+			u16 Xadc_RawData = ReadData (&Xadc);
+			din_analog = (Xadc_RawData>XADC_THRESHOLD)<<9;
+			XGpio_DiscreteWrite(&my_gpio, 1, RecvBuffer[0] + din_analog);
+			//loop_count = 0;
+			//printf("%d\r\n", din_analog);
+		//}
+
+		//loop_count++;
+	}
+
+	cleanup_platform();
+
+	return 0;
+}
+
+int UartIntrInit(XScuGic *IntcInstPtr, XUartPs *UartInstPtr, u16 DeviceId, u16 UartIntrId)
+{
+    int Status;
+    XUartPs_Config *Config;
+    u32 IntrMask;
+
+    /*
+     * Initialize the UART driver so that it's ready to use
+     * Look up the configuration in the config table, then initialize it.
+     */
+    Config = XUartPs_LookupConfig(DeviceId);
+    if (NULL == Config) {
+        return XST_FAILURE;
+    }
+
+    Status = XUartPs_CfgInitialize(UartInstPtr, Config, Config->BaseAddress);
+    if (Status != XST_SUCCESS) {
+        return XST_FAILURE;
+    }
+
+    /* Check hardware build */
+    Status = XUartPs_SelfTest(UartInstPtr);
+    if (Status != XST_SUCCESS) {
+        return XST_FAILURE;
+    }
+
+    /*
+     * Connect the UART to the interrupt subsystem such that interrupts
+     * can occur. This function is application specific.
+     */
+    Status = SetupInterruptSystem(IntcInstPtr, UartInstPtr, UartIntrId);
+    if (Status != XST_SUCCESS) {
+        return XST_FAILURE;
+    }
+
+    /*
+     * Setup the handlers for the UART that will be called from the
+     * interrupt context when data has been sent and received, specify
+     * a pointer to the UART driver instance as the callback reference
+     * so the handlers are able to access the instance data
+     */
+    XUartPs_SetHandler(UartInstPtr, (XUartPs_Handler)UARTHandler, UartInstPtr);
+
+    /*
+     * Enable the interrupt of the UART so interrupts will occur, setup
+     * a local loopback so data that is sent will be received.
+     */
+    IntrMask =
+        XUARTPS_IXR_TOUT | XUARTPS_IXR_PARITY | XUARTPS_IXR_FRAMING |
+        XUARTPS_IXR_OVER | XUARTPS_IXR_TXEMPTY | XUARTPS_IXR_RXFULL |
+        XUARTPS_IXR_RXOVR;
+
+    XUartPs_SetInterruptMask(UartInstPtr, IntrMask);
+
+    XUartPs_SetOperMode(UartInstPtr, XUARTPS_OPER_MODE_NORMAL);
+
+    /*
+     * Set the receiver timeout. If it is not set, and the last few bytes
+     * of data do not trigger the over-water or full interrupt, the bytes
+     * will not be received. By default it is disabled.
+     *
+     * The setting of 8 will timeout after 8 x 4 = 32 character times.
+     * Increase the time out value if baud rate is high, decrease it if
+     * baud rate is low.
+     */
+    XUartPs_SetRecvTimeout(UartInstPtr, 8);
+
+    return XST_SUCCESS;
+}
+
+static int SetupInterruptSystem(XScuGic *IntcInstancePtr, XUartPs *UartInstancePtr, u16 UartIntrId)
+{
+    int Status;
+    XScuGic_Config *IntcConfig; /* Config for interrupt controller */
+
+
+    /* Initialize the interrupt controller driver */
+    IntcConfig = XScuGic_LookupConfig(INTC_DEVICE_ID);
+    if (NULL == IntcConfig) {
+        return XST_FAILURE;
+    }
+
+    Status = XScuGic_CfgInitialize(IntcInstancePtr, IntcConfig,
+                    IntcConfig->CpuBaseAddress);
+    if (Status != XST_SUCCESS) {
+        return XST_FAILURE;
+    }
+
+    /*
+     * Connect the interrupt controller interrupt handler to the
+     * hardware interrupt handling logic in the processor.
+     */
+    Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+                (Xil_ExceptionHandler) XScuGic_InterruptHandler,
+                IntcInstancePtr);
+
+    /*
+     * Connect a device driver handler that will be called when an
+     * interrupt for the device occurs, the device driver handler
+     * performs the specific interrupt processing for the device
+     */
+    Status = XScuGic_Connect(IntcInstancePtr, UartIntrId,
+                  (Xil_ExceptionHandler) XUartPs_InterruptHandler,
+                  (void *) UartInstancePtr);
+    if (Status != XST_SUCCESS) {
+        return XST_FAILURE;
+    }
+
+    /* Enable the interrupt for the device */
+    XScuGic_Enable(IntcInstancePtr, UartIntrId);
+
+    /* Enable interrupts */
+         Xil_ExceptionEnable();
+
+     return XST_SUCCESS;
+}
+
+void UARTHandler(void *CallBackRef, u32 Event, unsigned int EventData)
+{
+	if (Event == XUARTPS_EVENT_RECV_DATA) {
+		XUartPs_Recv(&serial, RecvBuffer, 1);
+		XGpio_DiscreteWrite(&my_gpio, 1, (RecvBuffer[0] + (0x100) + din_analog));
+		//XGpio_DiscreteWrite(&my_gpio, 1, (RecvBuffer[0] + (0x100)));
+		usleep(100);
+		XGpio_DiscreteWrite(&my_gpio, 1, RecvBuffer[0] + din_analog);
+		//XGpio_DiscreteWrite(&my_gpio, 1, RecvBuffer[0]);
+	} else {
+		//XUartPs_Send(&serial, 11, 1);
+	}
+}
+
+void Xadc_Init(XSysMon *InstancePtr, u32 DeviceId) {
+	XSysMon_Config *ConfigPtr;
+	ConfigPtr = XSysMon_LookupConfig(DeviceId);
+	XSysMon_CfgInitialize(InstancePtr, ConfigPtr, ConfigPtr->BaseAddress);
+
+	// Disable the Channel Sequencer before configuring the Sequence registers.
+	XSysMon_SetSequencerMode(InstancePtr, XSM_SEQ_MODE_SAFE);
+	// Disable all alarms
+	XSysMon_SetAlarmEnables(InstancePtr, 0x0);
+	// Set averaging for all channels to 16 samples
+	XSysMon_SetAvg(InstancePtr, XSM_AVG_16_SAMPLES);
+	// Set differential input mode for all channels
+	XSysMon_SetSeqInputMode(InstancePtr, XADC_SEQ_CHANNELS);
+	// Set 6ADCCLK acquisition time in all channels
+	XSysMon_SetSeqAcqTime(InstancePtr, XADC_SEQ_CHANNELS);
+	// Disable averaging in all channels
+	XSysMon_SetSeqAvgEnables(InstancePtr, XADC_SEQ_CHANNELS);
+	// Enable all channels
+	XSysMon_SetSeqChEnables(InstancePtr, XADC_SEQ_CHANNELS);
+	// Set the ADCCLK frequency equal to 1/32 of System clock
+	XSysMon_SetAdcClkDivisor(InstancePtr, 32);
+	// Enable Calibration
+	XSysMon_SetCalibEnables(InstancePtr, XSM_CFR1_CAL_PS_GAIN_OFFSET_MASK | XSM_CFR1_CAL_ADC_GAIN_OFFSET_MASK);
+	// Enable the Channel Sequencer in continuous sequencer cycling mode
+	XSysMon_SetSequencerMode(InstancePtr, XSM_SEQ_MODE_CONTINPASS);
+	// Clear the old status
+//	XSysMon_GetStatus(InstancePtr);
+}
+
+u16 ReadData (XSysMon *InstancePtr)
+{
+	u16 RawData = 0;
+
+	XSysMon_GetStatus(InstancePtr);
+
+	while ((XSysMon_GetStatus(InstancePtr) & XSM_SR_EOS_MASK) != XSM_SR_EOS_MASK);
+
+	if (((1 << XADC_A1) & XADC_CHANNELS) != 0) {
+		RawData = XSysMon_GetAdcData(InstancePtr, XADC_A1);
+	}
+
+	return RawData; // return a high bit for each channel successfully read
+}
+
+void BTN_Intr_Handler(void *InstancePtr)
+{
+	XGpio_InterruptDisable(&my_gpio, GPIO_INT);
+	u32 TrxBuffer = XGpio_DiscreteRead(&my_gpio, 2);
+
+			if (TrxBuffer >> 8) {
+				//printf("Analog Input: %d\r\n", TrxBuffer);
+
+				XUartPs_Send(&serial, &TrxBuffer, 1);
+				//usleep(100);
+			}
+
+				(void)XGpio_InterruptClear(&my_gpio, GPIO_INT);
+					// Enable GPIO interrupts
+					XGpio_InterruptEnable(&my_gpio, GPIO_INT);
+}
+
+int InterruptSystemSetup (XScuGic *XScuGicInstancePtr) {
+	// Enable interrupt
+	XGpio_InterruptEnable(&my_gpio, GPIO_INT);
+	XGpio_InterruptGlobalEnable(&my_gpio);
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+			(Xil_ExceptionHandler) XScuGic_InterruptHandler,
+			XScuGicInstancePtr);
+	Xil_ExceptionEnable();
+
+	return XST_SUCCESS;
+}
+
+int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr) {
+	XScuGic_Config *IntcConfig;
+	int status;
+
+	// Interrupt controller initialisation
+	//IntcConfig = XScuGic_LookupConfig(DeviceId);
+
+	//status = XScuGic_CfgInitialize(&INTCInst, IntcConfig, IntcConfig->CpuBaseAddress);
+	//if (status != XST_SUCCESS)
+		//return XST_FAILURE;
+
+	// Call to interrupt setup
+	status = InterruptSystemSetup(&InterruptController);
+	if (status != XST_SUCCESS)
+		return XST_FAILURE;
+
+	// Connect GPIO interrupt to handler
+	status = XScuGic_Connect (&InterruptController, INTC_GPIO_INTERRUPT_ID,
+			(Xil_ExceptionHandler) BTN_Intr_Handler, (void *) GpioInstancePtr);
+	if (status != XST_SUCCESS)
+		return XST_FAILURE;
+
+	// Enable GPIO interrupts interrupt
+	XGpio_InterruptEnable (GpioInstancePtr, 1);
+	XGpio_InterruptGlobalEnable (GpioInstancePtr);
+
+	// Enable GPIO and timer interrupts in the controller
+	XScuGic_Enable(&InterruptController, INTC_GPIO_INTERRUPT_ID);
+
+	return XST_SUCCESS;
+}

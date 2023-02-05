@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>Bidirectional_Transmitter_wrapper_hw_platform_0_Traces</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.linuxtools.tmf.project.nature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>Traces/Run_Dec-14_22-53/PS_Trace_Dec-14_22-53/PS_Trace_Dec-14_22-53_</name>
+			<type>1</type>
+			<location>C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.sdk/Bidirectional_Transmitter_wrapper_hw_platform_0_Traces/Traces/.bookmarks</location>
+		</link>
+		<link>
+			<name>Traces/Run_Dec-14_23-36/PS_Trace_Dec-14_23-36/PS_Trace_Dec-14_23-36_</name>
+			<type>1</type>
+			<location>C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.sdk/Bidirectional_Transmitter_wrapper_hw_platform_0_Traces/Traces/.bookmarks</location>
+		</link>
+		<link>
+			<name>Traces/Run_Dec-14_23-56/PS_Trace_Dec-14_23-56/PS_Trace_Dec-14_23-56_</name>
+			<type>1</type>
+			<location>C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.sdk/Bidirectional_Transmitter_wrapper_hw_platform_0_Traces/Traces/.bookmarks</location>
+		</link>
+		<link>
+			<name>Traces/Run_Dec-15_00-45/PS_Trace_Dec-15_00-45/PS_Trace_Dec-15_00-45_</name>
+			<type>1</type>
+			<location>C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.sdk/Bidirectional_Transmitter_wrapper_hw_platform_0_Traces/Traces/.bookmarks</location>
+		</link>
+	</linkedResources>
+</projectDescription>

@@ -1,0 +1,2629 @@
+13:44:49 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+13:44:53 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+13:45:37 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+13:45:59 **** Auto Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:312:27: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartPs_Send(&serial, &TrxBuffer, 1);
+                           ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:334:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41632	   2800	  22744	  67176	  10668	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+13:46:02 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+13:48:15 **** Auto Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:312:27: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartPs_Send(&serial, &TrxBuffer, 1);
+                           ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:334:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41648	   2800	  22744	  67192	  10678	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+13:48:22 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+13:48:33 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+13:49:12 **** Auto Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:313:27: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartPs_Send(&serial, &TrxBuffer, 1);
+                           ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:335:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41656	   2800	  22744	  67200	  10680	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+13:49:23 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+13:49:40 **** Auto Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:313:27: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartPs_Send(&serial, &TrxBuffer, 1);
+                           ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:335:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41656	   2800	  22744	  67200	  10680	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+13:49:43 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+13:50:05 **** Auto Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:312:27: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartPs_Send(&serial, &TrxBuffer, 1);
+                           ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:334:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41648	   2800	  22744	  67192	  10678	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+13:50:09 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+13:50:25 **** Auto Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:312:27: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartPs_Send(&serial, &TrxBuffer, 1);
+                           ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:334:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41648	   2800	  22744	  67192	  10678	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+13:50:29 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+13:51:19 **** Auto Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:312:27: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartPs_Send(&serial, &TrxBuffer, 1);
+                           ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:334:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41648	   2800	  22744	  67192	  10678	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+13:53:35 **** Auto Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:312:27: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartPs_Send(&serial, &TrxBuffer, 1);
+                           ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:334:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41632	   2800	  22744	  67176	  10668	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+13:53:39 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+13:54:19 **** Auto Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:309:7: error: expected '(' before '!' token
+    if !(TrxBuffer >> 8) {
+       ^
+../src/main.c:309:7: warning: statement with no effect [-Wunused-value]
+    if !(TrxBuffer >> 8) {
+       ^~~~~~~~~~~~~
+../src/main.c:309:25: error: expected ';' before '{' token
+    if !(TrxBuffer >> 8) {
+                         ^
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:334:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+make: *** [src/main.o] Error 1
+13:54:30 **** Auto Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:312:27: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartPs_Send(&serial, &TrxBuffer, 1);
+                           ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:334:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41648	   2800	  22744	  67192	  10678	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+13:54:34 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+13:56:09 **** Auto Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:312:27: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartPs_Send(&serial, &TrxBuffer, 1);
+                           ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:334:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41648	   2800	  22744	  67192	  10678	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+13:56:45 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:310:28: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("Analog Input: %d\r\n", TrxBuffer >> 8);
+                           ~^       ~~~~~~~~~~~~~~
+                           %ld
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:334:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  91740	   4236	  23504	 119480	  1d2b8	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+13:57:06 **** Auto Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:310:28: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("Analog Input: %d\r\n", TrxBuffer >> 8);
+                           ~^       ~~~~~~~~~~~~~~
+                           %ld
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:334:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  91740	   4236	  23504	 119480	  1d2b8	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+13:57:14 **** Auto Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:310:28: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("Analog Input: %d\r\n", TrxBuffer);
+                           ~^
+                           %ld
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:334:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  91740	   4236	  23504	 119480	  1d2b8	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+13:57:18 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+14:04:03 **** Clean-only build of project Bidirectional_Transmitter_bsp ****
+make -k clean 
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s clean 
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s clean 
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s clean 
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s clean 
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s clean 
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s clean 
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s clean 
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s clean 
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s clean 
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s clean 
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s clean 
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s clean 
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s clean 
+make -C ps7_cortexa9_0/libsrc/sysmon_v7_4/src -s clean 
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s clean 
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s clean 
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s clean 
+rm -f ps7_cortexa9_0/lib/libxil.a
+14:04:05 **** Clean-only build of configuration Debug for project Bidirectional_Transmitter ****
+make clean 
+rm -rf  ./src/main.o ./src/platform.o  ./src/main.d ./src/platform.d  Bidirectional_Transmitter.elf.size  Bidirectional_Transmitter.elf
+' '
+14:04:05 **** Build of project Bidirectional_Transmitter_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sysmon_v7_4/src"
+make -C ps7_cortexa9_0/libsrc/sysmon_v7_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/sysmon_v7_4/src"
+make -C ps7_cortexa9_0/libsrc/sysmon_v7_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sysmon"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+14:04:32 **** Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:310:28: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("Analog Input: %d\r\n", TrxBuffer);
+                           ~^
+                           %ld
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:334:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  91740	   4236	  23504	 119480	  1d2b8	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+14:05:24 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+14:12:17 **** Clean-only build of project Bidirectional_Transmitter_bsp ****
+make -k clean 
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s clean 
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s clean 
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s clean 
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s clean 
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s clean 
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s clean 
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s clean 
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s clean 
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s clean 
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s clean 
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s clean 
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s clean 
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s clean 
+make -C ps7_cortexa9_0/libsrc/sysmon_v7_4/src -s clean 
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s clean 
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s clean 
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s clean 
+rm -f ps7_cortexa9_0/lib/libxil.a
+14:12:19 **** Clean-only build of configuration Debug for project Bidirectional_Transmitter ****
+make clean 
+rm -rf  ./src/main.o ./src/platform.o  ./src/main.d ./src/platform.d  Bidirectional_Transmitter.elf.size  Bidirectional_Transmitter.elf
+' '
+14:12:20 **** Build of project Bidirectional_Transmitter_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sysmon_v7_4/src"
+make -C ps7_cortexa9_0/libsrc/sysmon_v7_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/sysmon_v7_4/src"
+make -C ps7_cortexa9_0/libsrc/sysmon_v7_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sysmon"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+14:12:51 **** Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:310:28: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("Analog Input: %d\r\n", TrxBuffer);
+                           ~^
+                           %ld
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:334:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  91740	   4236	  23504	 119480	  1d2b8	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+14:13:05 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+14:14:09 **** Auto Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:312:27: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartPs_Send(&serial, &TrxBuffer, 1);
+                           ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:334:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41648	   2800	  22744	  67192	  10678	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+14:14:13 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+14:15:11 **** Auto Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:312:27: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartPs_Send(&serial, &TrxBuffer, 1);
+                           ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:334:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41744	   2800	  22744	  67288	  106d8	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+14:15:17 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+14:22:02 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+14:23:21 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+14:40:32 **** Clean-only build of project Bidirectional_Transmitter_bsp ****
+make -k clean 
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s clean 
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s clean 
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s clean 
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s clean 
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s clean 
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s clean 
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s clean 
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s clean 
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s clean 
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s clean 
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s clean 
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s clean 
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s clean 
+make -C ps7_cortexa9_0/libsrc/sysmon_v7_4/src -s clean 
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s clean 
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s clean 
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s clean 
+rm -f ps7_cortexa9_0/lib/libxil.a
+14:40:34 **** Clean-only build of configuration Debug for project Bidirectional_Transmitter ****
+make clean 
+rm -rf  ./src/main.o ./src/platform.o  ./src/main.d ./src/platform.d  Bidirectional_Transmitter.elf.size  Bidirectional_Transmitter.elf
+' '
+14:40:34 **** Build of project Bidirectional_Transmitter_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sysmon_v7_4/src"
+make -C ps7_cortexa9_0/libsrc/sysmon_v7_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/sysmon_v7_4/src"
+make -C ps7_cortexa9_0/libsrc/sysmon_v7_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sysmon"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+14:41:01 **** Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:312:27: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartPs_Send(&serial, &TrxBuffer, 1);
+                           ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:334:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41744	   2800	  22744	  67288	  106d8	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+14:41:27 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+14:42:19 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+14:48:04 **** Clean-only build of project Bidirectional_Transmitter_bsp ****
+make -k clean 
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s clean 
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s clean 
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s clean 
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s clean 
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s clean 
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s clean 
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s clean 
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s clean 
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s clean 
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s clean 
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s clean 
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s clean 
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s clean 
+make -C ps7_cortexa9_0/libsrc/sysmon_v7_4/src -s clean 
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s clean 
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s clean 
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s clean 
+rm -f ps7_cortexa9_0/lib/libxil.a
+14:48:05 **** Clean-only build of configuration Debug for project Bidirectional_Transmitter ****
+make clean 
+rm -rf  ./src/main.o ./src/platform.o  ./src/main.d ./src/platform.d  Bidirectional_Transmitter.elf.size  Bidirectional_Transmitter.elf
+' '
+14:48:06 **** Build of project Bidirectional_Transmitter_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sysmon_v7_4/src"
+make -C ps7_cortexa9_0/libsrc/sysmon_v7_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/sysmon_v7_4/src"
+make -C ps7_cortexa9_0/libsrc/sysmon_v7_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sysmon"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+14:48:30 **** Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:312:27: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartPs_Send(&serial, &TrxBuffer, 1);
+                           ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:334:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41744	   2800	  22744	  67288	  106d8	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+14:49:02 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+14:50:39 **** Auto Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:312:27: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartPs_Send(&serial, &TrxBuffer, 1);
+                           ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:334:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41744	   2800	  22744	  67288	  106d8	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+14:50:46 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+14:54:24 **** Auto Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:312:27: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartPs_Send(&serial, &TrxBuffer, 1);
+                           ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:334:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41752	   2800	  22744	  67296	  106e0	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+14:54:30 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+14:55:00 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+14:56:20 **** Auto Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:312:27: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartPs_Send(&serial, &TrxBuffer, 1);
+                           ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:334:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41744	   2800	  22744	  67288	  106d8	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+15:04:50 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:06:51 **** Auto Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:117:22: error: 'InstancePtr' undeclared (first use in this function)
+    XSysMon_GetStatus(InstancePtr);
+                      ^~~~~~~~~~~
+../src/main.c:117:22: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:125:18: error: 'Xadc_RawData' undeclared (first use in this function); did you mean 'RawData'?
+    din_analog = (Xadc_RawData>XADC_THRESHOLD)<<9;
+                  ^~~~~~~~~~~~
+                  RawData
+../src/main.c:115:7: warning: variable 'RawData' set but not used [-Wunused-but-set-variable]
+   u16 RawData = 0;
+       ^~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:322:27: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartPs_Send(&serial, &TrxBuffer, 1);
+                           ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:344:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+make: *** [src/main.o] Error 1
+15:08:02 **** Auto Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:116:22: error: incompatible type for argument 1 of 'XSysMon_GetStatus'
+    XSysMon_GetStatus(Xadc);
+                      ^~~~
+In file included from ../src/main.c:11:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xsysmon.h:572:5: note: expected 'XSysMon * {aka struct <anonymous> *}' but argument is of type 'XSysMon {aka struct <anonymous>}'
+ u32 XSysMon_GetStatus(XSysMon *InstancePtr);
+     ^~~~~~~~~~~~~~~~~
+../src/main.c:118:30: error: incompatible type for argument 1 of 'XSysMon_GetStatus'
+    while ((XSysMon_GetStatus(Xadc) & XSM_SR_EOS_MASK) != XSM_SR_EOS_MASK);
+                              ^~~~
+In file included from ../src/main.c:11:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xsysmon.h:572:5: note: expected 'XSysMon * {aka struct <anonymous> *}' but argument is of type 'XSysMon {aka struct <anonymous>}'
+ u32 XSysMon_GetStatus(XSysMon *InstancePtr);
+     ^~~~~~~~~~~~~~~~~
+../src/main.c:121:34: error: incompatible type for argument 1 of 'XSysMon_GetAdcData'
+     RawData = XSysMon_GetAdcData(Xadc, XADC_A1);
+                                  ^~~~
+In file included from ../src/main.c:11:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xsysmon.h:580:5: note: expected 'XSysMon * {aka struct <anonymous> *}' but argument is of type 'XSysMon {aka struct <anonymous>}'
+ u16 XSysMon_GetAdcData(XSysMon *InstancePtr, u8 Channel);
+     ^~~~~~~~~~~~~~~~~~
+../src/main.c:114:7: warning: variable 'RawData' set but not used [-Wunused-but-set-variable]
+   u16 RawData = 0;
+       ^~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:322:27: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartPs_Send(&serial, &TrxBuffer, 1);
+                           ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:344:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+make: *** [src/main.o] Error 1
+15:08:38 **** Auto Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:114:7: warning: variable 'RawData' set but not used [-Wunused-but-set-variable]
+   u16 RawData = 0;
+       ^~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:322:27: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartPs_Send(&serial, &TrxBuffer, 1);
+                           ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:344:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41824	   2800	  22744	  67368	  10728	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+15:08:49 **** Auto Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:125:18: error: 'Xadc_RawData' undeclared (first use in this function); did you mean 'RawData'?
+    din_analog = (Xadc_RawData>XADC_THRESHOLD)<<9;
+                  ^~~~~~~~~~~~
+                  RawData
+../src/main.c:125:18: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:114:7: warning: variable 'RawData' set but not used [-Wunused-but-set-variable]
+   u16 RawData = 0;
+       ^~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:322:27: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartPs_Send(&serial, &TrxBuffer, 1);
+                           ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:344:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+make: *** [src/main.o] Error 1
+15:09:15 **** Auto Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:322:27: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartPs_Send(&serial, &TrxBuffer, 1);
+                           ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:344:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41800	   2800	  22744	  67344	  10710	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+15:09:26 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:14:50 **** Auto Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:322:27: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartPs_Send(&serial, &TrxBuffer, 1);
+                           ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:344:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41644	   2800	  22744	  67188	  10674	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+15:15:00 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:21:19 **** Clean-only build of project Bidirectional_Transmitter_bsp ****
+make -k clean 
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s clean 
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s clean 
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s clean 
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s clean 
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s clean 
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s clean 
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s clean 
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s clean 
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s clean 
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s clean 
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s clean 
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s clean 
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s clean 
+make -C ps7_cortexa9_0/libsrc/sysmon_v7_4/src -s clean 
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s clean 
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s clean 
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s clean 
+rm -f ps7_cortexa9_0/lib/libxil.a
+15:21:20 **** Clean-only build of configuration Debug for project Bidirectional_Transmitter ****
+make clean 
+rm -rf  ./src/main.o ./src/platform.o  ./src/main.d ./src/platform.d  Bidirectional_Transmitter.elf.size  Bidirectional_Transmitter.elf
+' '
+15:21:21 **** Build of project Bidirectional_Transmitter_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sysmon_v7_4/src"
+make -C ps7_cortexa9_0/libsrc/sysmon_v7_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/sysmon_v7_4/src"
+make -C ps7_cortexa9_0/libsrc/sysmon_v7_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sysmon"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+15:21:46 **** Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:322:27: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartPs_Send(&serial, &TrxBuffer, 1);
+                           ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:344:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41644	   2800	  22744	  67188	  10674	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+15:22:05 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:24:29 **** Auto Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:322:27: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartPs_Send(&serial, &TrxBuffer, 1);
+                           ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:344:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41588	   2800	  22744	  67132	  1063c	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+15:24:42 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:26:26 **** Auto Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:322:27: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartPs_Send(&serial, &TrxBuffer, 1);
+                           ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:344:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41588	   2800	  22744	  67132	  1063c	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+15:26:29 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:26:49 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:28:33 **** Auto Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:322:27: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartPs_Send(&serial, &TrxBuffer, 1);
+                           ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:344:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41588	   2800	  22744	  67132	  1063c	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+15:28:36 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:32:15 **** Clean-only build of project Bidirectional_Transmitter_bsp ****
+make -k clean 
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s clean 
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s clean 
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s clean 
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s clean 
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s clean 
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s clean 
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s clean 
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s clean 
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s clean 
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s clean 
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s clean 
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s clean 
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s clean 
+make -C ps7_cortexa9_0/libsrc/sysmon_v7_4/src -s clean 
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s clean 
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s clean 
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s clean 
+rm -f ps7_cortexa9_0/lib/libxil.a
+15:32:16 **** Clean-only build of configuration Debug for project Bidirectional_Transmitter ****
+make clean 
+rm -rf  ./src/main.o ./src/platform.o  ./src/main.d ./src/platform.d  Bidirectional_Transmitter.elf.size  Bidirectional_Transmitter.elf
+' '
+15:32:17 **** Build of project Bidirectional_Transmitter_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sysmon_v7_4/src"
+make -C ps7_cortexa9_0/libsrc/sysmon_v7_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/sysmon_v7_4/src"
+make -C ps7_cortexa9_0/libsrc/sysmon_v7_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sysmon"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+15:32:45 **** Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:322:27: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartPs_Send(&serial, &TrxBuffer, 1);
+                           ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:344:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41588	   2800	  22744	  67132	  1063c	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+15:33:19 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:33:30 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:33:49 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:35:53 **** Auto Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:322:27: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartPs_Send(&serial, &TrxBuffer, 1);
+                           ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:344:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41644	   2800	  22744	  67188	  10674	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+15:36:14 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:36:34 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:37:31 **** Auto Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:322:27: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartPs_Send(&serial, &TrxBuffer, 1);
+                           ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:344:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41644	   2800	  22744	  67188	  10674	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+15:37:43 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:37:53 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:38:12 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:40:52 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:41:07 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:42:40 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:43:06 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:48:32 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:48:44 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:49:01 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:50:48 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:51:04 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:54:03 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:54:19 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:54:40 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:56:57 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:57:34 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:58:21 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:58:30 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+15:58:46 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:00:45 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:01:05 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:04:45 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:05:04 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:10:03 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:10:18 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:11:27 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:16:08 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:16:38 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:18:03 **** Auto Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:96:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:101:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:322:27: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartPs_Send(&serial, &TrxBuffer, 1);
+                           ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:344:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41644	   2800	  22744	  67188	  10674	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+16:18:08 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:25:47 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+04:55:07 **** Auto Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:95:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(gpio_status = XST_SUCCESS)
+     ^~~~~~~~~~~
+../src/main.c:100:6: warning: unused variable 'loop_count' [-Wunused-variable]
+  int loop_count = 0;
+      ^~~~~~~~~~
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:305:27: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartPs_Send(&serial, &TrxBuffer, 1);
+                           ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+../src/main.c: In function 'IntcInitFunction':
+../src/main.c:327:18: warning: unused variable 'IntcConfig' [-Wunused-variable]
+  XScuGic_Config *IntcConfig;
+                  ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41644	   2800	  22744	  67188	  10674	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+04:57:32 **** Auto Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:304:27: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartPs_Send(&serial, &TrxBuffer, 1);
+                           ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41620	   2800	  22744	  67164	  1065c	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+05:01:27 **** Auto Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:294:25: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+   XUartPs_Send(&serial, &TrxBuffer, 1);
+                         ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41620	   2800	  22744	  67164	  1065c	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+05:02:17 **** Auto Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'BTN_Intr_Handler':
+../src/main.c:294:25: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+   XUartPs_Send(&serial, &TrxBuffer, 1);
+                         ^
+In file included from ../src/main.c:9:0:
+../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/include/xuartps.h:465:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ u32 XUartPs_Send(XUartPs *InstancePtr,u8 *BufferPtr,
+     ^~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Bidirectional_Transmitter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Bidirectional_Transmitter_bsp/ps7_cortexa9_0/lib -o "Bidirectional_Transmitter.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Bidirectional_Transmitter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Bidirectional_Transmitter.elf  |tee "Bidirectional_Transmitter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41620	   2800	  22744	  67164	  1065c	Bidirectional_Transmitter.elf
+'Finished building: Bidirectional_Transmitter.elf.size'
+' '
+05:02:55 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+05:04:01 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+05:09:29 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+14:05:24 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+14:06:07 **** Incremental Build of configuration Debug for project Bidirectional_Transmitter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
