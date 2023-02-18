@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Wed Dec 14 23:59:23 2022
+// Date        : Thu Feb  9 10:33:12 2023
 // Host        : Akash-PC running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ Bidirectional_Transmitter_gpio_parse_0_0_sim_netlist.v
@@ -18,14 +18,17 @@
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
    (gpio_in,
     tx_gpio,
-    din_gpio);
-  input [9:0]gpio_in;
+    din_gpio,
+    intensity_gpio);
+  input [25:0]gpio_in;
   output [8:0]tx_gpio;
   output din_gpio;
+  output [15:0]intensity_gpio;
 
-  wire [9:0]gpio_in;
+  wire [25:0]gpio_in;
 
   assign din_gpio = gpio_in[9];
+  assign intensity_gpio[15:0] = gpio_in[25:10];
   assign tx_gpio[8:0] = gpio_in[8:0];
 endmodule
 `ifndef GLBL

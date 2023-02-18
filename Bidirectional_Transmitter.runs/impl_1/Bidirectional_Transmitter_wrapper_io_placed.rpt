@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date                      : Sat Dec 17 15:31:16 2022
+| Date                      : Thu Feb  9 11:43:17 2023
 | Host                      : Akash-PC running 64-bit major release  (build 9200)
 | Command                   : report_io -file Bidirectional_Transmitter_wrapper_io_placed.rpt
 | Design                    : Bidirectional_Transmitter_wrapper
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|           155 |
+|           156 |
 +---------------+
 
 
@@ -249,7 +249,7 @@ Table of Contents
 | L12        |                   |            | GND                     | GND           |                   |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | L13        |                   |            | VCCINT                  | VCCINT        |                   |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | L14        | tx_green_LED      | High Range | IO_L22P_T3_AD7P_35      | OUTPUT        | LVCMOS33          |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
-| L15        |                   | High Range | IO_L22N_T3_AD7N_35      | User IO       |                   |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| L15        | analog_clk        | High Range | IO_L22N_T3_AD7N_35      | OUTPUT        | LVCMOS33          |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | L16        |                   | High Range | IO_L11P_T1_SRCC_35      | User IO       |                   |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | L17        |                   | High Range | IO_L11N_T1_SRCC_35      | User IO       |                   |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | L18        |                   |            | GND                     | GND           |                   |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |

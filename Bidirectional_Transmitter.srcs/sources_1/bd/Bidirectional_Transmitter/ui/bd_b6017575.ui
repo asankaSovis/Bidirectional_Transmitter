@@ -1,65 +1,70 @@
 {
    ExpandedHierarchyInLayout: "",
-   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS-threadsafe
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS
 #  -string -flagsOSRD
-preplace port rx_green_LED -pg 1 -y 910 -defaultsOSRD
+preplace port rx_green_LED -pg 1 -y 770 -defaultsOSRD
 preplace port DDR -pg 1 -y 680 -defaultsOSRD
-preplace port Vp_Vn -pg 1 -y 620 -defaultsOSRD
-preplace port rx_red_LED -pg 1 -y 930 -defaultsOSRD
-preplace port tx_red_LED -pg 1 -y 790 -defaultsOSRD
+preplace port Vp_Vn -pg 1 -y 600 -defaultsOSRD
+preplace port rx_red_LED -pg 1 -y 790 -defaultsOSRD
+preplace port tx_red_LED -pg 1 -y 900 -defaultsOSRD
 preplace port Vaux0 -pg 1 -y 200 -defaultsOSRD
 preplace port Vaux1 -pg 1 -y 460 -defaultsOSRD
-preplace port dout -pg 1 -y 750 -defaultsOSRD
-preplace port tx_green_LED -pg 1 -y 770 -defaultsOSRD
-preplace port Vaux12 -pg 1 -y 540 -defaultsOSRD
+preplace port analog_clk -pg 1 -y 1010 -defaultsOSRD
+preplace port dout -pg 1 -y 860 -defaultsOSRD
+preplace port tx_green_LED -pg 1 -y 880 -defaultsOSRD
+preplace port Vaux12 -pg 1 -y 560 -defaultsOSRD
 preplace port Vaux5 -pg 1 -y 480 -defaultsOSRD
 preplace port FIXED_IO -pg 1 -y 700 -defaultsOSRD
-preplace port Vaux13 -pg 1 -y 560 -defaultsOSRD
+preplace port Vaux13 -pg 1 -y 540 -defaultsOSRD
 preplace port Vaux6 -pg 1 -y 500 -defaultsOSRD
-preplace port Vaux15 -pg 1 -y 600 -defaultsOSRD
-preplace port Vaux8 -pg 1 -y 580 -defaultsOSRD
+preplace port Vaux15 -pg 1 -y 580 -defaultsOSRD
+preplace port Vaux8 -pg 1 -y 620 -defaultsOSRD
 preplace port Vaux9 -pg 1 -y 520 -defaultsOSRD
 preplace inst rst_ps7_0_50M -pg 1 -lvl 2 -y 100 -defaultsOSRD
-preplace inst UART_Reciever_0 -pg 1 -lvl 6 -y 910 -defaultsOSRD
+preplace inst UART_Reciever_0 -pg 1 -lvl 6 -y 780 -defaultsOSRD
+preplace inst positioning_clk_0 -pg 1 -lvl 7 -y 1010 -defaultsOSRD
 preplace inst xadc_wiz_0 -pg 1 -lvl 4 -y 500 -defaultsOSRD
 preplace inst xlconcat_0 -pg 1 -lvl 1 -y 340 -defaultsOSRD
-preplace inst axi_gpio_0 -pg 1 -lvl 4 -y 810 -defaultsOSRD
-preplace inst UART_Transmitter_0 -pg 1 -lvl 6 -y 770 -defaultsOSRD
-preplace inst gpio_parse_0 -pg 1 -lvl 5 -y 790 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 4 -y 800 -defaultsOSRD
+preplace inst UART_Transmitter_0 -pg 1 -lvl 7 -y 880 -defaultsOSRD
+preplace inst gpio_parse_0 -pg 1 -lvl 5 -y 910 -defaultsOSRD
 preplace inst ps7_0_axi_periph -pg 1 -lvl 3 -y 260 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 2 -y 330 -defaultsOSRD
-preplace netloc Vp_Vn_0_1 1 0 4 NJ 620 NJ 620 NJ 620 1010J
-preplace netloc processing_system7_0_DDR 1 2 5 680J 420 1040J 320 NJ 320 NJ 320 1950J
-preplace netloc UART_Reciever_0_red_LED 1 6 1 NJ
-preplace netloc processing_system7_0_IRQ_P2F_UART0 1 0 3 30 500 NJ 500 640
-preplace netloc Vaux8_0_1 1 0 4 NJ 580 NJ 580 690J 500 NJ
-preplace netloc Vaux5_0_1 1 0 4 0J 470 NJ 470 660J 460 NJ
-preplace netloc UART_Transmitter_0_red_LED 1 6 1 NJ
+preplace netloc Vp_Vn_0_1 1 0 4 10J 530 NJ 530 710J 450 1070J
+preplace netloc processing_system7_0_DDR 1 2 6 690J 420 1020J 310 NJ 310 NJ 310 NJ 310 2270J
+preplace netloc UART_Reciever_0_red_LED 1 6 2 NJ 790 NJ
+preplace netloc processing_system7_0_IRQ_P2F_UART0 1 0 3 30 450 NJ 450 640
+preplace netloc Vaux8_0_1 1 0 4 0J 510 NJ 510 720J 500 NJ
+preplace netloc Vaux5_0_1 1 0 4 NJ 480 210J 470 660J 460 NJ
+preplace netloc UART_Transmitter_0_red_LED 1 7 1 NJ
 preplace netloc processing_system7_0_M_AXI_GP0 1 2 1 660
-preplace netloc UART_Transmitter_0_dout 1 6 1 NJ
-preplace netloc UART_Reciever_0_axgpio 1 4 3 1400J 990 NJ 990 1950
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 2 220 460 630
-preplace netloc Vaux6_0_1 1 0 4 10J 480 NJ 480 NJ 480 NJ
-preplace netloc gpio_parse_0_din_gpio 1 5 1 1660
-preplace netloc Vaux15_0_1 1 0 4 NJ 600 NJ 600 NJ 600 1020J
+preplace netloc UART_Transmitter_0_dout 1 7 1 NJ
+preplace netloc UART_Reciever_0_axgpio 1 4 3 NJ 820 1700J 870 1960
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 2 240 210 650
+preplace netloc Vaux6_0_1 1 0 4 NJ 500 220J 480 NJ 480 NJ
+preplace netloc gpio_parse_0_din_gpio 1 5 1 1710
+preplace netloc Vaux15_0_1 1 0 4 NJ 580 NJ 580 NJ 580 NJ
 preplace netloc ps7_0_axi_periph_M01_AXI 1 3 1 1070
-preplace netloc rst_ps7_0_50M_interconnect_aresetn 1 2 1 700
+preplace netloc positioning_clk_0_out_clk 1 7 1 NJ
+preplace netloc rst_ps7_0_50M_interconnect_aresetn 1 2 1 710
 preplace netloc Vaux9_0_1 1 0 4 NJ 520 NJ 520 NJ 520 NJ
 preplace netloc xlconcat_0_dout 1 1 1 N
-preplace netloc axi_gpio_0_gpio_io_o 1 4 1 N
-preplace netloc Vaux1_0_1 1 0 4 NJ 460 210J 450 NJ 450 1080J
-preplace netloc processing_system7_0_FIXED_IO 1 2 5 650J 430 1030J 310 NJ 310 NJ 310 1960J
-preplace netloc UART_Reciever_0_green_LED 1 6 1 NJ
-preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 2 2 670 440 1040
-preplace netloc Vaux12_0_1 1 0 4 NJ 540 NJ 540 NJ 540 NJ
-preplace netloc axi_gpio_0_ip2intc_irpt 1 0 5 20 490 NJ 490 NJ 490 1050J 300 1390
+preplace netloc axi_gpio_0_gpio_io_o 1 4 1 1400
+preplace netloc Vaux1_0_1 1 0 4 NJ 460 NJ 460 650J 440 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 2 6 670J 430 1050J 320 NJ 320 NJ 320 NJ 320 2260J
+preplace netloc UART_Reciever_0_green_LED 1 6 2 NJ 770 NJ
+preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 2 2 680 470 1030
+preplace netloc Vaux12_0_1 1 0 4 -20J 550 NJ 550 NJ 550 1080J
+preplace netloc UART_Reciever_0_recieving 1 6 1 1970
+preplace netloc axi_gpio_0_ip2intc_irpt 1 0 5 20 540 NJ 540 NJ 540 1040J 300 1390
 preplace netloc Vaux0_0_1 1 0 4 NJ 200 NJ 200 650J 100 1080J
-preplace netloc gpio_parse_0_tx_gpio 1 5 1 N
-preplace netloc UART_Transmitter_0_green_LED 1 6 1 NJ
-preplace netloc processing_system7_0_FCLK_CLK0 1 1 5 210 210 690 470 1030 1000 NJ 1000 1670
-preplace netloc Vaux13_0_1 1 0 4 NJ 560 NJ 560 NJ 560 NJ
+preplace netloc gpio_parse_0_tx_gpio 1 5 2 NJ 890 N
+preplace netloc UART_Transmitter_0_green_LED 1 7 1 NJ
+preplace netloc processing_system7_0_FCLK_CLK0 1 1 6 230 490 700 490 1020 690 NJ 690 1710 690 1980
+preplace netloc Vaux13_0_1 1 0 4 -10J 560 NJ 560 NJ 560 NJ
 preplace netloc ps7_0_axi_periph_M00_AXI 1 3 1 1060
-levelinfo -pg 1 -20 120 430 860 1250 1530 1810 1980 -top 0 -bot 1010
+preplace netloc gpio_parse_0_intensity_gpio 1 5 2 NJ 930 1960
+levelinfo -pg 1 -40 120 440 870 1250 1550 1840 2120 2290 -top 0 -bot 1080
 ",
 }
 {

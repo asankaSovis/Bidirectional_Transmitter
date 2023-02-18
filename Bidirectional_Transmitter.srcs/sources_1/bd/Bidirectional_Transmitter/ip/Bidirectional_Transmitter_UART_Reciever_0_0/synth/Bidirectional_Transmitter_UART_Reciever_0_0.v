@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2022 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2023 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -60,7 +60,8 @@ module Bidirectional_Transmitter_UART_Reciever_0_0 (
   din,
   rx_axgpio,
   green_LED,
-  red_LED
+  red_LED,
+  recieving
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME int_clk, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0" *)
@@ -70,12 +71,14 @@ input wire din;
 output wire [8 : 0] rx_axgpio;
 output wire green_LED;
 output wire red_LED;
+output wire recieving;
 
   UART_Reciever inst (
     .int_clk(int_clk),
     .din(din),
     .rx_axgpio(rx_axgpio),
     .green_LED(green_LED),
-    .red_LED(red_LED)
+    .red_LED(red_LED),
+    .recieving(recieving)
   );
 endmodule

@@ -1,4 +1,6 @@
 set_property SRC_FILE_INFO {cfile:C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/constrs_1/imports/Downloads/pins.xdc rfile:../../../Bidirectional_Transmitter.srcs/constrs_1/imports/Downloads/pins.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:11 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN L15   IOSTANDARD LVCMOS33 } [get_ports { analog_clk }]; #IO_L22N_T3_AD7N_35 Sch=led0_b
 set_property src_info {type:XDC file:1 line:12 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN G17   IOSTANDARD LVCMOS33 } [get_ports { rx_green_LED }]; #IO_L16P_T2_35 Sch=led0_g
 set_property src_info {type:XDC file:1 line:13 export:INPUT save:INPUT read:READ} [current_design]

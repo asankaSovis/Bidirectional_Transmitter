@@ -1,7 +1,7 @@
-module UART_Reciever (int_clk, din, rx_axgpio, green_LED, red_LED);
+module UART_Reciever (int_clk, din, rx_axgpio, green_LED, red_LED, recieving);
 	
 	input int_clk, din;
-	output green_LED, red_LED;
+	output green_LED, red_LED, recieving;
 	
 	wire run, trigger, enable;
 	reg state;
@@ -22,7 +22,7 @@ module UART_Reciever (int_clk, din, rx_axgpio, green_LED, red_LED);
 	reciever module3 (bit_ID, din, rx_clk, data);
 	data_trigger module4 (read_state, din, trigger);
 	recieve_trigger module5 (bit_ID, int_clk, ext_trigger);
-	indicator module6 (bit_ID, rx_clk, green_LED, red_LED);
+	indicator module6 (bit_ID, rx_clk, green_LED, red_LED, recieving);
 	
 	always @(posedge trigger or negedge enable) begin
 		if (trigger == 1) begin

@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Sat Dec 17 15:28:15 2022
+//Date        : Thu Feb  9 11:39:46 2023
 //Host        : Akash-PC running 64-bit major release  (build 9200)
 //Command     : generate_target Bidirectional_Transmitter_wrapper.bd
 //Design      : Bidirectional_Transmitter_wrapper
@@ -51,6 +51,7 @@ module Bidirectional_Transmitter_wrapper
     Vaux9_v_p,
     Vp_Vn_v_n,
     Vp_Vn_v_p,
+    analog_clk,
     dout,
     rx_green_LED,
     rx_red_LED,
@@ -97,6 +98,7 @@ module Bidirectional_Transmitter_wrapper
   input Vaux9_v_p;
   input Vp_Vn_v_n;
   input Vp_Vn_v_p;
+  output analog_clk;
   output dout;
   output rx_green_LED;
   output rx_red_LED;
@@ -144,6 +146,7 @@ module Bidirectional_Transmitter_wrapper
   wire Vaux9_v_p;
   wire Vp_Vn_v_n;
   wire Vp_Vn_v_p;
+  wire analog_clk;
   wire dout;
   wire rx_green_LED;
   wire rx_red_LED;
@@ -192,6 +195,7 @@ module Bidirectional_Transmitter_wrapper
         .Vaux9_v_p(Vaux9_v_p),
         .Vp_Vn_v_n(Vp_Vn_v_n),
         .Vp_Vn_v_p(Vp_Vn_v_p),
+        .analog_clk(analog_clk),
         .dout(dout),
         .rx_green_LED(rx_green_LED),
         .rx_red_LED(rx_red_LED),

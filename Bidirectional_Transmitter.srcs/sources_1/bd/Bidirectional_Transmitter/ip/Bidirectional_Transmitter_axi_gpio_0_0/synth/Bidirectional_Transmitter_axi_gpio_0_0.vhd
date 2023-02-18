@@ -1,4 +1,4 @@
--- (c) Copyright 1995-2022 Xilinx, Inc. All rights reserved.
+-- (c) Copyright 1995-2023 Xilinx, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of Xilinx, Inc. and is protected under U.S. and
@@ -78,7 +78,7 @@ ENTITY Bidirectional_Transmitter_axi_gpio_0_0 IS
     s_axi_rvalid : OUT STD_LOGIC;
     s_axi_rready : IN STD_LOGIC;
     ip2intc_irpt : OUT STD_LOGIC;
-    gpio_io_o : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+    gpio_io_o : OUT STD_LOGIC_VECTOR(25 DOWNTO 0);
     gpio2_io_i : IN STD_LOGIC_VECTOR(8 DOWNTO 0)
   );
 END Bidirectional_Transmitter_axi_gpio_0_0;
@@ -125,9 +125,9 @@ ARCHITECTURE Bidirectional_Transmitter_axi_gpio_0_0_arch OF Bidirectional_Transm
       s_axi_rvalid : OUT STD_LOGIC;
       s_axi_rready : IN STD_LOGIC;
       ip2intc_irpt : OUT STD_LOGIC;
-      gpio_io_i : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-      gpio_io_o : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
-      gpio_io_t : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+      gpio_io_i : IN STD_LOGIC_VECTOR(25 DOWNTO 0);
+      gpio_io_o : OUT STD_LOGIC_VECTOR(25 DOWNTO 0);
+      gpio_io_t : OUT STD_LOGIC_VECTOR(25 DOWNTO 0);
       gpio2_io_i : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
       gpio2_io_o : OUT STD_LOGIC_VECTOR(8 DOWNTO 0);
       gpio2_io_t : OUT STD_LOGIC_VECTOR(8 DOWNTO 0)
@@ -138,7 +138,7 @@ ARCHITECTURE Bidirectional_Transmitter_axi_gpio_0_0_arch OF Bidirectional_Transm
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF Bidirectional_Transmitter_axi_gpio_0_0_arch : ARCHITECTURE IS "Bidirectional_Transmitter_axi_gpio_0_0,axi_gpio,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF Bidirectional_Transmitter_axi_gpio_0_0_arch: ARCHITECTURE IS "Bidirectional_Transmitter_axi_gpio_0_0,axi_gpio,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_gpio,x_ipVersion=2.0,x_ipCoreRevision=19,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_S_AXI_ADDR_WIDTH=9,C_S_AXI_DATA_WIDTH=32,C_GPIO_WIDTH=10,C_GPIO2_WIDTH=9,C_ALL_INPUTS=0,C_ALL_INPUTS_2=1,C_ALL_OUTPUTS=1,C_ALL_OUTPUTS_2=0,C_INTERRUPT_PRESENT=1,C_DOUT_DEFAULT=0x00000000,C_TRI_DEFAULT=0xFFFFFFFF,C_IS_DUAL=1,C_DOUT_DEFAULT_2=0x00000000,C_TRI_DEFAULT_2=0xFFFFF" & 
+  ATTRIBUTE CORE_GENERATION_INFO OF Bidirectional_Transmitter_axi_gpio_0_0_arch: ARCHITECTURE IS "Bidirectional_Transmitter_axi_gpio_0_0,axi_gpio,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_gpio,x_ipVersion=2.0,x_ipCoreRevision=19,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_S_AXI_ADDR_WIDTH=9,C_S_AXI_DATA_WIDTH=32,C_GPIO_WIDTH=26,C_GPIO2_WIDTH=9,C_ALL_INPUTS=0,C_ALL_INPUTS_2=1,C_ALL_OUTPUTS=1,C_ALL_OUTPUTS_2=0,C_INTERRUPT_PRESENT=1,C_DOUT_DEFAULT=0x00000000,C_TRI_DEFAULT=0xFFFFFFFF,C_IS_DUAL=1,C_DOUT_DEFAULT_2=0x00000000,C_TRI_DEFAULT_2=0xFFFFF" & 
 "FFF}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
@@ -177,7 +177,7 @@ BEGIN
       C_FAMILY => "zynq",
       C_S_AXI_ADDR_WIDTH => 9,
       C_S_AXI_DATA_WIDTH => 32,
-      C_GPIO_WIDTH => 10,
+      C_GPIO_WIDTH => 26,
       C_GPIO2_WIDTH => 9,
       C_ALL_INPUTS => 0,
       C_ALL_INPUTS_2 => 1,
@@ -211,7 +211,7 @@ BEGIN
       s_axi_rvalid => s_axi_rvalid,
       s_axi_rready => s_axi_rready,
       ip2intc_irpt => ip2intc_irpt,
-      gpio_io_i => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 10)),
+      gpio_io_i => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 26)),
       gpio_io_o => gpio_io_o,
       gpio2_io_i => gpio2_io_i
     );

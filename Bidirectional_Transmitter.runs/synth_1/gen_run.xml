@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1671271102">
+<GenRun Id="synth_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1675922992">
   <File Type="PA-TCL" Name="Bidirectional_Transmitter_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="Bidirectional_Transmitter_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Bidirectional_Transmitter_wrapper_reports.tcl"/>
@@ -33,6 +33,13 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/gpio_parse.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/positioning_clk.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -81,7 +88,8 @@
   <BlockFileSet Type="BlockSrcs" Name="Bidirectional_Transmitter_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Bidirectional_Transmitter_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Bidirectional_Transmitter_xadc_wiz_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="Bidirectional_Transmitter_gpio_parse_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Bidirectional_Transmitter_UART_Transmitter_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Bidirectional_Transmitter_positioning_clk_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Bidirectional_Transmitter_xlconcat_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Bidirectional_Transmitter_gpio_parse_0_0"/>
 </GenRun>
