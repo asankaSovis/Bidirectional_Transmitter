@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Sat Dec 17 15:29:15 2022
+// Date        : Thu Feb  9 11:40:49 2023
 // Host        : Akash-PC running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ Bidirectional_Transmitter_UART_Reciever_0_0_sim_netlist.v
@@ -20,23 +20,26 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
     din,
     rx_axgpio,
     green_LED,
-    red_LED);
+    red_LED,
+    recieving);
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 int_clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME int_clk, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0" *) input int_clk;
   input din;
   output [8:0]rx_axgpio;
   output green_LED;
   output red_LED;
+  output recieving;
 
   wire din;
-  wire green_LED;
   wire int_clk;
+  wire recieving;
   wire red_LED;
   wire [8:0]rx_axgpio;
 
+  assign green_LED = recieving;
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_UART_Reciever inst
        (.din(din),
-        .green_LED(green_LED),
         .int_clk(int_clk),
+        .recieving(recieving),
         .red_LED(red_LED),
         .rx_axgpio(rx_axgpio));
 endmodule
@@ -44,19 +47,18 @@ endmodule
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_UART_Reciever
    (rx_axgpio,
     red_LED,
-    green_LED,
+    recieving,
     din,
     int_clk);
   output [8:0]rx_axgpio;
   output red_LED;
-  output green_LED;
+  output recieving;
   input din;
   input int_clk;
 
   wire din;
   wire enable;
   wire end_rx04_out;
-  wire green_LED;
   wire int_clk;
   wire module2_n_1;
   wire module2_n_11;
@@ -67,6 +69,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_UART_Reciever
   wire module2_n_9;
   wire module5_n_1;
   wire p_0_out;
+  wire recieving;
   wire red_LED;
   wire [8:0]rx_axgpio;
   wire rx_clk;
@@ -89,7 +92,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_UART_Reciever
         .end_rx_reg_1(module2_n_4),
         .end_rx_reg_2(module2_n_11),
         .end_rx_reg_3(module5_n_1),
-        .green_LED(green_LED),
+        .recieving(recieving),
         .red_LED(red_LED),
         .rx_clk(rx_clk),
         .trigger_reg(module2_n_5),
@@ -138,7 +141,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_bit_counter_rx
     trigger_reg,
     SR,
     red_LED,
-    green_LED,
+    recieving,
     trigger_reg_0,
     \data_reg[7] ,
     end_rx_reg_2,
@@ -153,7 +156,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_bit_counter_rx
   output trigger_reg;
   output [0:0]SR;
   output red_LED;
-  output green_LED;
+  output recieving;
   output trigger_reg_0;
   output [0:0]\data_reg[7] ;
   output end_rx_reg_2;
@@ -177,7 +180,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_bit_counter_rx
   wire end_rx_reg_1;
   wire end_rx_reg_2;
   wire end_rx_reg_3;
-  wire green_LED;
+  wire recieving;
   wire red_LED;
   wire rx_clk;
   wire trigger_reg;
@@ -289,12 +292,12 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_bit_counter_rx
   (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT4 #(
     .INIT(16'h0001)) 
-    green_LED_INST_0
+    recieving_INST_0
        (.I0(end_rx_reg_0),
         .I1(end_rx_reg),
         .I2(end_rx_reg_1),
         .I3(trigger_reg),
-        .O(green_LED));
+        .O(recieving));
   (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT5 #(
     .INIT(32'hAAAAAAA8)) 

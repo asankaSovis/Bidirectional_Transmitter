@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# UART_Reciever, UART_Transmitter, gpio_parse
+# UART_Reciever, UART_Transmitter, gpio_parse, positioning_clk
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -177,6 +177,7 @@ proc create_root_design { parentCell } {
   set Vp_Vn [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_analog_io_rtl:1.0 Vp_Vn ]
 
   # Create ports
+  set analog_clk [ create_bd_port -dir O -type clk analog_clk ]
   set dout [ create_bd_port -dir O dout ]
   set rx_green_LED [ create_bd_port -dir O rx_green_LED ]
   set rx_red_LED [ create_bd_port -dir O rx_red_LED ]
@@ -212,7 +213,7 @@ proc create_root_design { parentCell } {
    CONFIG.C_ALL_INPUTS_2 {1} \
    CONFIG.C_ALL_OUTPUTS {1} \
    CONFIG.C_GPIO2_WIDTH {9} \
-   CONFIG.C_GPIO_WIDTH {10} \
+   CONFIG.C_GPIO_WIDTH {26} \
    CONFIG.C_INTERRUPT_PRESENT {1} \
    CONFIG.C_IS_DUAL {1} \
    CONFIG.GPIO_BOARD_INTERFACE {Custom} \
@@ -226,6 +227,17 @@ proc create_root_design { parentCell } {
      catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    } elseif { $gpio_parse_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: positioning_clk_0, and set properties
+  set block_name positioning_clk
+  set block_cell_name positioning_clk_0
+  if { [catch {set positioning_clk_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $positioning_clk_0 eq "" } {
      catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
@@ -753,6 +765,7 @@ proc create_root_design { parentCell } {
   # Create port connections
   connect_bd_net -net UART_Reciever_0_axgpio [get_bd_pins UART_Reciever_0/rx_axgpio] [get_bd_pins axi_gpio_0/gpio2_io_i]
   connect_bd_net -net UART_Reciever_0_green_LED [get_bd_ports rx_green_LED] [get_bd_pins UART_Reciever_0/green_LED]
+  connect_bd_net -net UART_Reciever_0_recieving [get_bd_pins UART_Reciever_0/recieving] [get_bd_pins positioning_clk_0/data_rx]
   connect_bd_net -net UART_Reciever_0_red_LED [get_bd_ports rx_red_LED] [get_bd_pins UART_Reciever_0/red_LED]
   connect_bd_net -net UART_Transmitter_0_dout [get_bd_ports dout] [get_bd_pins UART_Transmitter_0/dout]
   connect_bd_net -net UART_Transmitter_0_green_LED [get_bd_ports tx_green_LED] [get_bd_pins UART_Transmitter_0/green_LED]
@@ -760,7 +773,9 @@ proc create_root_design { parentCell } {
   connect_bd_net -net axi_gpio_0_gpio_io_o [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins gpio_parse_0/gpio_in]
   connect_bd_net -net axi_gpio_0_ip2intc_irpt [get_bd_pins axi_gpio_0/ip2intc_irpt] [get_bd_pins xlconcat_0/In0]
   connect_bd_net -net gpio_parse_0_din_gpio [get_bd_pins UART_Reciever_0/din] [get_bd_pins gpio_parse_0/din_gpio]
+  connect_bd_net -net gpio_parse_0_intensity_gpio [get_bd_pins gpio_parse_0/intensity_gpio] [get_bd_pins positioning_clk_0/analog_reading]
   connect_bd_net -net gpio_parse_0_tx_gpio [get_bd_pins UART_Transmitter_0/tx_axgpio] [get_bd_pins gpio_parse_0/tx_gpio]
+  connect_bd_net -net positioning_clk_0_out_clk [get_bd_ports analog_clk] [get_bd_pins positioning_clk_0/out_clk]
   connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins UART_Reciever_0/int_clk] [get_bd_pins UART_Transmitter_0/int_clk] [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk] [get_bd_pins xadc_wiz_0/s_axi_aclk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_50M/ext_reset_in]
   connect_bd_net -net processing_system7_0_IRQ_P2F_UART0 [get_bd_pins processing_system7_0/IRQ_P2F_UART0] [get_bd_pins xlconcat_0/In1]

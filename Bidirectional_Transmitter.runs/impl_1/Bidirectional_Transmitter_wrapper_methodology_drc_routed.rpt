@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sat Dec 17 15:31:41 2022
+| Date         : Thu Feb  9 11:43:40 2023
 | Host         : Akash-PC running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Bidirectional_Transmitter_wrapper_methodology_drc_routed.rpt -pb Bidirectional_Transmitter_wrapper_methodology_drc_routed.pb -rpx Bidirectional_Transmitter_wrapper_methodology_drc_routed.rpx
 | Design       : Bidirectional_Transmitter_wrapper
@@ -23,12 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 71
+             Violations found: 72
 +-----------+----------+-------------------------------+------------+
 | Rule      | Severity | Description                   | Violations |
 +-----------+----------+-------------------------------+------------+
 | LUTAR-1   | Warning  | LUT drives async reset alert  | 16         |
-| TIMING-17 | Warning  | Non-clocked sequential cell   | 44         |
+| TIMING-17 | Warning  | Non-clocked sequential cell   | 45         |
 | TIMING-18 | Warning  | Missing input or output delay | 3          |
 | TIMING-20 | Warning  | Non-clocked latch             | 8          |
 +-----------+----------+-------------------------------+------------+
@@ -333,6 +333,11 @@ Related violations: <none>
 TIMING-17#44 Warning
 Non-clocked sequential cell  
 The clock pin Bidirectional_Transmitter_i/UART_Transmitter_0/inst/state_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#45 Warning
+Non-clocked sequential cell  
+The clock pin Bidirectional_Transmitter_i/positioning_clk_0/inst/out_clk_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-18#1 Warning

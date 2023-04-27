@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="Bidirectional_Transmitter_UART_Reciever_0_0_synth_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1671271102">
+<GenRun Id="Bidirectional_Transmitter_UART_Reciever_0_0_synth_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1675922992">
   <File Type="PA-TCL" Name="Bidirectional_Transmitter_UART_Reciever_0_0.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="Bidirectional_Transmitter_UART_Reciever_0_0_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Bidirectional_Transmitter_UART_Reciever_0_0_reports.tcl"/>

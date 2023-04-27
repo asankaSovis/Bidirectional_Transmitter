@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Wed Dec 14 23:59:23 2022
+-- Date        : Thu Feb  9 10:33:12 2023
 -- Host        : Akash-PC running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ Bidirectional_Transmitter_gpio_parse_0_0_sim_netlist.vhdl
@@ -16,9 +16,10 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
   port (
-    gpio_in : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    gpio_in : in STD_LOGIC_VECTOR ( 25 downto 0 );
     tx_gpio : out STD_LOGIC_VECTOR ( 8 downto 0 );
-    din_gpio : out STD_LOGIC
+    din_gpio : out STD_LOGIC;
+    intensity_gpio : out STD_LOGIC_VECTOR ( 15 downto 0 )
   );
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is true;
@@ -33,9 +34,10 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
 end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix;
 
 architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
-  signal \^gpio_in\ : STD_LOGIC_VECTOR ( 9 downto 0 );
+  signal \^gpio_in\ : STD_LOGIC_VECTOR ( 25 downto 0 );
 begin
-  \^gpio_in\(9 downto 0) <= gpio_in(9 downto 0);
+  \^gpio_in\(25 downto 0) <= gpio_in(25 downto 0);
   din_gpio <= \^gpio_in\(9);
+  intensity_gpio(15 downto 0) <= \^gpio_in\(25 downto 10);
   tx_gpio(8 downto 0) <= \^gpio_in\(8 downto 0);
 end STRUCTURE;

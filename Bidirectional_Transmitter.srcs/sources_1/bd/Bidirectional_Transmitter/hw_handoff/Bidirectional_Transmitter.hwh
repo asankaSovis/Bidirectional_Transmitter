@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Dec 17 15:28:16 2022" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Feb  9 11:39:47 2023" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:cora-z7-07s:part0:1.0" DEVICE="7z007s" NAME="Bidirectional_Transmitter" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -68,6 +68,11 @@
     <PORT DIR="O" NAME="rx_red_LED" SIGIS="undef" SIGNAME="UART_Reciever_0_red_LED">
       <CONNECTIONS>
         <CONNECTION INSTANCE="UART_Reciever_0" PORT="red_LED"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="analog_clk" SIGIS="clk" SIGNAME="positioning_clk_0_out_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="positioning_clk_0" PORT="out_clk"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -212,6 +217,11 @@
             <CONNECTION INSTANCE="External_Ports" PORT="rx_red_LED"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" NAME="recieving" SIGIS="undef" SIGNAME="UART_Reciever_0_recieving">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="positioning_clk_0" PORT="data_rx"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -260,7 +270,7 @@
             <REGISTER NAME="GPIO_DATA">
               <PROPERTY NAME="DESCRIPTION" VALUE="Channel-1 AXI GPIO Data register"/>
               <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x0"/>
-              <PROPERTY NAME="SIZE" VALUE="10"/>
+              <PROPERTY NAME="SIZE" VALUE="26"/>
               <PROPERTY NAME="ACCESS" VALUE="read-write"/>
               <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
               <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
@@ -273,14 +283,14 @@
                   <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
                   <PROPERTY NAME="READ_ACTION" VALUE=""/>
                   <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="10"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="26"/>
                 </FIELD>
               </FIELDS>
             </REGISTER>
             <REGISTER NAME="GPIO_TRI">
               <PROPERTY NAME="DESCRIPTION" VALUE="Channel-1 AXI GPIO 3-State Control register"/>
               <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x4"/>
-              <PROPERTY NAME="SIZE" VALUE="10"/>
+              <PROPERTY NAME="SIZE" VALUE="26"/>
               <PROPERTY NAME="ACCESS" VALUE="read-write"/>
               <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
               <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
@@ -293,7 +303,7 @@
                   <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
                   <PROPERTY NAME="READ_ACTION" VALUE=""/>
                   <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="10"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="26"/>
                 </FIELD>
               </FIELDS>
             </REGISTER>
@@ -424,7 +434,7 @@
         <PARAMETER NAME="C_FAMILY" VALUE="zynq"/>
         <PARAMETER NAME="C_S_AXI_ADDR_WIDTH" VALUE="9"/>
         <PARAMETER NAME="C_S_AXI_DATA_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="C_GPIO_WIDTH" VALUE="10"/>
+        <PARAMETER NAME="C_GPIO_WIDTH" VALUE="26"/>
         <PARAMETER NAME="C_GPIO2_WIDTH" VALUE="9"/>
         <PARAMETER NAME="C_ALL_INPUTS" VALUE="0"/>
         <PARAMETER NAME="C_ALL_INPUTS_2" VALUE="1"/>
@@ -545,7 +555,7 @@
             <CONNECTION INSTANCE="xlconcat_0" PORT="In0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="9" NAME="gpio_io_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio_io_o">
+        <PORT DIR="O" LEFT="25" NAME="gpio_io_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio_io_o">
           <CONNECTIONS>
             <CONNECTION INSTANCE="gpio_parse_0" PORT="gpio_in"/>
           </CONNECTIONS>
@@ -627,7 +637,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="9" NAME="gpio_in" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio_io_o">
+        <PORT DIR="I" LEFT="25" NAME="gpio_in" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio_io_o">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_o"/>
           </CONNECTIONS>
@@ -640,6 +650,36 @@
         <PORT DIR="O" NAME="din_gpio" SIGIS="undef" SIGNAME="gpio_parse_0_din_gpio">
           <CONNECTIONS>
             <CONNECTION INSTANCE="UART_Reciever_0" PORT="din"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="intensity_gpio" RIGHT="0" SIGIS="undef" SIGNAME="gpio_parse_0_intensity_gpio">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="positioning_clk_0" PORT="analog_reading"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/positioning_clk_0" HWVERSION="1.0" INSTANCE="positioning_clk_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="positioning_clk" VLNV="xilinx.com:module_ref:positioning_clk:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Bidirectional_Transmitter_positioning_clk_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="data_rx" SIGIS="undef" SIGNAME="UART_Reciever_0_recieving">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="UART_Reciever_0" PORT="recieving"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="analog_reading" RIGHT="0" SIGIS="undef" SIGNAME="gpio_parse_0_intensity_gpio">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="gpio_parse_0" PORT="intensity_gpio"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="out_clk" SIGIS="clk" SIGNAME="positioning_clk_0_out_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="analog_clk"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1806,8 +1846,8 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M01_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_ACLK"/>
-            <CONNECTION INSTANCE="UART_Transmitter_0" PORT="int_clk"/>
             <CONNECTION INSTANCE="UART_Reciever_0" PORT="int_clk"/>
+            <CONNECTION INSTANCE="UART_Transmitter_0" PORT="int_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="FCLK_RESET0_N" SIGIS="rst" SIGNAME="processing_system7_0_FCLK_RESET0_N">

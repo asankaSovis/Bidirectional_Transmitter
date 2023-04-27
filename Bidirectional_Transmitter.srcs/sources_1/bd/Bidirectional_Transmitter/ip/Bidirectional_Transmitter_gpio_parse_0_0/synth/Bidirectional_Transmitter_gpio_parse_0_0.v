@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2022 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2023 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -58,16 +58,19 @@
 module Bidirectional_Transmitter_gpio_parse_0_0 (
   gpio_in,
   tx_gpio,
-  din_gpio
+  din_gpio,
+  intensity_gpio
 );
 
-input wire [9 : 0] gpio_in;
+input wire [25 : 0] gpio_in;
 output wire [8 : 0] tx_gpio;
 output wire din_gpio;
+output wire [15 : 0] intensity_gpio;
 
   gpio_parse inst (
     .gpio_in(gpio_in),
     .tx_gpio(tx_gpio),
-    .din_gpio(din_gpio)
+    .din_gpio(din_gpio),
+    .intensity_gpio(intensity_gpio)
   );
 endmodule

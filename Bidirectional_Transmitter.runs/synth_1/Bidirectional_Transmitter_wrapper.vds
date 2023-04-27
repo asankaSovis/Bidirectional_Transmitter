@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sat Dec 17 15:29:17 2022
-# Process ID: 9440
+# Start of session at: Thu Feb  9 11:40:53 2023
+# Process ID: 16180
 # Current directory: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1
 # Command line: vivado.exe -log Bidirectional_Transmitter_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Bidirectional_Transmitter_wrapper.tcl
 # Log file: C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/Bidirectional_Transmitter_wrapper.vds
@@ -13,54 +13,56 @@ source Bidirectional_Transmitter_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
-add_files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 380.238 ; gain = 57.512
+add_files: Time (s): cpu = 00:00:03 ; elapsed = 00:00:13 . Memory (MB): peak = 380.266 ; gain = 57.859
 Command: synth_design -top Bidirectional_Transmitter_wrapper -part xc7z007sclg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 160 
+INFO: Helper process launched with PID 16812 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 488.059 ; gain = 100.918
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 489.438 ; gain = 102.219
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Bidirectional_Transmitter_wrapper' [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hdl/Bidirectional_Transmitter_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'Bidirectional_Transmitter' [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v:13]
-INFO: [Synth 8-6157] synthesizing module 'Bidirectional_Transmitter_UART_Reciever_0_0' [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-9440-Akash-PC/realtime/Bidirectional_Transmitter_UART_Reciever_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Bidirectional_Transmitter_UART_Reciever_0_0' (1#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-9440-Akash-PC/realtime/Bidirectional_Transmitter_UART_Reciever_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'Bidirectional_Transmitter_UART_Transmitter_0_0' [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-9440-Akash-PC/realtime/Bidirectional_Transmitter_UART_Transmitter_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Bidirectional_Transmitter_UART_Transmitter_0_0' (2#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-9440-Akash-PC/realtime/Bidirectional_Transmitter_UART_Transmitter_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'Bidirectional_Transmitter_axi_gpio_0_0' [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-9440-Akash-PC/realtime/Bidirectional_Transmitter_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Bidirectional_Transmitter_axi_gpio_0_0' (3#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-9440-Akash-PC/realtime/Bidirectional_Transmitter_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'Bidirectional_Transmitter_gpio_parse_0_0' [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-9440-Akash-PC/realtime/Bidirectional_Transmitter_gpio_parse_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Bidirectional_Transmitter_gpio_parse_0_0' (4#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-9440-Akash-PC/realtime/Bidirectional_Transmitter_gpio_parse_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'Bidirectional_Transmitter_processing_system7_0_0' [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-9440-Akash-PC/realtime/Bidirectional_Transmitter_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Bidirectional_Transmitter_processing_system7_0_0' (5#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-9440-Akash-PC/realtime/Bidirectional_Transmitter_processing_system7_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'Bidirectional_Transmitter_processing_system7_0_0' requires 67 connections, but only 65 given [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v:301]
-INFO: [Synth 8-6157] synthesizing module 'Bidirectional_Transmitter_ps7_0_axi_periph_0' [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v:512]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_13DORB8' [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v:1219]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_13DORB8' (6#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v:1219]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_IFRYJ0' [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v:1351]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_IFRYJ0' (7#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v:1351]
-INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1JY0D5H' [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v:1483]
-INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1JY0D5H' (8#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v:1483]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_11NJTC7' [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v:1629]
-INFO: [Synth 8-6157] synthesizing module 'Bidirectional_Transmitter_auto_pc_0' [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-9440-Akash-PC/realtime/Bidirectional_Transmitter_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Bidirectional_Transmitter_auto_pc_0' (9#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-9440-Akash-PC/realtime/Bidirectional_Transmitter_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_11NJTC7' (10#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v:1629]
-INFO: [Synth 8-6157] synthesizing module 'Bidirectional_Transmitter_xbar_0' [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-9440-Akash-PC/realtime/Bidirectional_Transmitter_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Bidirectional_Transmitter_xbar_0' (11#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-9440-Akash-PC/realtime/Bidirectional_Transmitter_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Bidirectional_Transmitter_ps7_0_axi_periph_0' (12#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v:512]
-WARNING: [Synth 8-350] instance 'ps7_0_axi_periph' of module 'Bidirectional_Transmitter_ps7_0_axi_periph_0' requires 101 connections, but only 90 given [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v:367]
-INFO: [Synth 8-6157] synthesizing module 'Bidirectional_Transmitter_rst_ps7_0_50M_0' [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-9440-Akash-PC/realtime/Bidirectional_Transmitter_rst_ps7_0_50M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Bidirectional_Transmitter_rst_ps7_0_50M_0' (13#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-9440-Akash-PC/realtime/Bidirectional_Transmitter_rst_ps7_0_50M_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'rst_ps7_0_50M' of module 'Bidirectional_Transmitter_rst_ps7_0_50M_0' requires 10 connections, but only 7 given [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v:458]
-INFO: [Synth 8-6157] synthesizing module 'Bidirectional_Transmitter_xadc_wiz_0_0' [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-9440-Akash-PC/realtime/Bidirectional_Transmitter_xadc_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'Bidirectional_Transmitter_xadc_wiz_0_0' (14#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-9440-Akash-PC/realtime/Bidirectional_Transmitter_xadc_wiz_0_0_stub.v:5]
-WARNING: [Synth 8-350] instance 'xadc_wiz_0' of module 'Bidirectional_Transmitter_xadc_wiz_0_0' requires 45 connections, but only 39 given [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v:466]
-INFO: [Synth 8-6157] synthesizing module 'Bidirectional_Transmitter_xlconcat_0_0' [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-9440-Akash-PC/realtime/Bidirectional_Transmitter_xlconcat_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Bidirectional_Transmitter_xlconcat_0_0' (15#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-9440-Akash-PC/realtime/Bidirectional_Transmitter_xlconcat_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Bidirectional_Transmitter' (16#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'Bidirectional_Transmitter_wrapper' (17#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hdl/Bidirectional_Transmitter_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'Bidirectional_Transmitter_UART_Reciever_0_0' [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-16180-Akash-PC/realtime/Bidirectional_Transmitter_UART_Reciever_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Bidirectional_Transmitter_UART_Reciever_0_0' (1#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-16180-Akash-PC/realtime/Bidirectional_Transmitter_UART_Reciever_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Bidirectional_Transmitter_UART_Transmitter_0_0' [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-16180-Akash-PC/realtime/Bidirectional_Transmitter_UART_Transmitter_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Bidirectional_Transmitter_UART_Transmitter_0_0' (2#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-16180-Akash-PC/realtime/Bidirectional_Transmitter_UART_Transmitter_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Bidirectional_Transmitter_axi_gpio_0_0' [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-16180-Akash-PC/realtime/Bidirectional_Transmitter_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Bidirectional_Transmitter_axi_gpio_0_0' (3#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-16180-Akash-PC/realtime/Bidirectional_Transmitter_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Bidirectional_Transmitter_gpio_parse_0_0' [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-16180-Akash-PC/realtime/Bidirectional_Transmitter_gpio_parse_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Bidirectional_Transmitter_gpio_parse_0_0' (4#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-16180-Akash-PC/realtime/Bidirectional_Transmitter_gpio_parse_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Bidirectional_Transmitter_positioning_clk_0_0' [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-16180-Akash-PC/realtime/Bidirectional_Transmitter_positioning_clk_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Bidirectional_Transmitter_positioning_clk_0_0' (5#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-16180-Akash-PC/realtime/Bidirectional_Transmitter_positioning_clk_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Bidirectional_Transmitter_processing_system7_0_0' [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-16180-Akash-PC/realtime/Bidirectional_Transmitter_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Bidirectional_Transmitter_processing_system7_0_0' (6#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-16180-Akash-PC/realtime/Bidirectional_Transmitter_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'Bidirectional_Transmitter_processing_system7_0_0' requires 67 connections, but only 65 given [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v:313]
+INFO: [Synth 8-6157] synthesizing module 'Bidirectional_Transmitter_ps7_0_axi_periph_0' [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v:524]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_13DORB8' [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v:1231]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_13DORB8' (7#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v:1231]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_IFRYJ0' [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v:1363]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_IFRYJ0' (8#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v:1363]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1JY0D5H' [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v:1495]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1JY0D5H' (9#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v:1495]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_11NJTC7' [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v:1641]
+INFO: [Synth 8-6157] synthesizing module 'Bidirectional_Transmitter_auto_pc_0' [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-16180-Akash-PC/realtime/Bidirectional_Transmitter_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Bidirectional_Transmitter_auto_pc_0' (10#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-16180-Akash-PC/realtime/Bidirectional_Transmitter_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_11NJTC7' (11#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v:1641]
+INFO: [Synth 8-6157] synthesizing module 'Bidirectional_Transmitter_xbar_0' [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-16180-Akash-PC/realtime/Bidirectional_Transmitter_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Bidirectional_Transmitter_xbar_0' (12#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-16180-Akash-PC/realtime/Bidirectional_Transmitter_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Bidirectional_Transmitter_ps7_0_axi_periph_0' (13#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v:524]
+WARNING: [Synth 8-350] instance 'ps7_0_axi_periph' of module 'Bidirectional_Transmitter_ps7_0_axi_periph_0' requires 101 connections, but only 90 given [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v:379]
+INFO: [Synth 8-6157] synthesizing module 'Bidirectional_Transmitter_rst_ps7_0_50M_0' [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-16180-Akash-PC/realtime/Bidirectional_Transmitter_rst_ps7_0_50M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Bidirectional_Transmitter_rst_ps7_0_50M_0' (14#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-16180-Akash-PC/realtime/Bidirectional_Transmitter_rst_ps7_0_50M_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'rst_ps7_0_50M' of module 'Bidirectional_Transmitter_rst_ps7_0_50M_0' requires 10 connections, but only 7 given [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v:470]
+INFO: [Synth 8-6157] synthesizing module 'Bidirectional_Transmitter_xadc_wiz_0_0' [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-16180-Akash-PC/realtime/Bidirectional_Transmitter_xadc_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'Bidirectional_Transmitter_xadc_wiz_0_0' (15#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-16180-Akash-PC/realtime/Bidirectional_Transmitter_xadc_wiz_0_0_stub.v:5]
+WARNING: [Synth 8-350] instance 'xadc_wiz_0' of module 'Bidirectional_Transmitter_xadc_wiz_0_0' requires 45 connections, but only 39 given [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v:478]
+INFO: [Synth 8-6157] synthesizing module 'Bidirectional_Transmitter_xlconcat_0_0' [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-16180-Akash-PC/realtime/Bidirectional_Transmitter_xlconcat_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Bidirectional_Transmitter_xlconcat_0_0' (16#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/.Xil/Vivado-16180-Akash-PC/realtime/Bidirectional_Transmitter_xlconcat_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Bidirectional_Transmitter' (17#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/synth/Bidirectional_Transmitter.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'Bidirectional_Transmitter_wrapper' (18#1) [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/hdl/Bidirectional_Transmitter_wrapper.v:12]
 WARNING: [Synth 8-3331] design s00_couplers_imp_11NJTC7 has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design s00_couplers_imp_11NJTC7 has unconnected port M_ARESETN
 WARNING: [Synth 8-3331] design m02_couplers_imp_1JY0D5H has unconnected port M_ACLK
@@ -76,7 +78,7 @@ WARNING: [Synth 8-3331] design m00_couplers_imp_13DORB8 has unconnected port M_A
 WARNING: [Synth 8-3331] design m00_couplers_imp_13DORB8 has unconnected port S_ACLK
 WARNING: [Synth 8-3331] design m00_couplers_imp_13DORB8 has unconnected port S_ARESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 543.156 ; gain = 156.016
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 545.059 ; gain = 157.840
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -89,10 +91,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 543.156 ; gain = 156.016
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 545.059 ; gain = 157.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 543.156 ; gain = 156.016
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 545.059 ; gain = 157.840
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z007sclg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -117,6 +119,8 @@ Parsing XDC File [c:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Tra
 Finished Parsing XDC File [c:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/ip/Bidirectional_Transmitter_xbar_0/Bidirectional_Transmitter_xbar_0/Bidirectional_Transmitter_xbar_0_in_context.xdc] for cell 'Bidirectional_Transmitter_i/ps7_0_axi_periph/xbar'
 Parsing XDC File [c:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/ip/Bidirectional_Transmitter_xlconcat_0_0/Bidirectional_Transmitter_xlconcat_0_0/Bidirectional_Transmitter_xlconcat_0_0_in_context.xdc] for cell 'Bidirectional_Transmitter_i/xlconcat_0'
 Finished Parsing XDC File [c:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/ip/Bidirectional_Transmitter_xlconcat_0_0/Bidirectional_Transmitter_xlconcat_0_0/Bidirectional_Transmitter_xlconcat_0_0_in_context.xdc] for cell 'Bidirectional_Transmitter_i/xlconcat_0'
+Parsing XDC File [c:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/ip/Bidirectional_Transmitter_positioning_clk_0_0/Bidirectional_Transmitter_positioning_clk_0_0/Bidirectional_Transmitter_positioning_clk_0_0_in_context.xdc] for cell 'Bidirectional_Transmitter_i/positioning_clk_0'
+Finished Parsing XDC File [c:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/ip/Bidirectional_Transmitter_positioning_clk_0_0/Bidirectional_Transmitter_positioning_clk_0_0/Bidirectional_Transmitter_positioning_clk_0_0_in_context.xdc] for cell 'Bidirectional_Transmitter_i/positioning_clk_0'
 Parsing XDC File [c:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/ip/Bidirectional_Transmitter_auto_pc_0/Bidirectional_Transmitter_auto_pc_0/Bidirectional_Transmitter_auto_pc_0_in_context.xdc] for cell 'Bidirectional_Transmitter_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Finished Parsing XDC File [c:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/sources_1/bd/Bidirectional_Transmitter/ip/Bidirectional_Transmitter_auto_pc_0/Bidirectional_Transmitter_auto_pc_0/Bidirectional_Transmitter_auto_pc_0_in_context.xdc] for cell 'Bidirectional_Transmitter_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Parsing XDC File [C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.srcs/constrs_1/imports/Downloads/pins.xdc]
@@ -130,16 +134,16 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 824.793 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 827.000 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 824.793 ; gain = 437.652
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:32 . Memory (MB): peak = 827.000 ; gain = 439.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z007sclg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 824.793 ; gain = 437.652
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:32 . Memory (MB): peak = 827.000 ; gain = 439.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -415,12 +419,13 @@ Applied set_property DONT_TOUCH = true for Bidirectional_Transmitter_i/gpio_pars
 Applied set_property DONT_TOUCH = true for Bidirectional_Transmitter_i/xadc_wiz_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Bidirectional_Transmitter_i/ps7_0_axi_periph/xbar. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Bidirectional_Transmitter_i/xlconcat_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Bidirectional_Transmitter_i/positioning_clk_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Bidirectional_Transmitter_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:16 . Memory (MB): peak = 824.793 ; gain = 437.652
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:34 . Memory (MB): peak = 827.000 ; gain = 439.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:16 . Memory (MB): peak = 824.793 ; gain = 437.652
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:34 . Memory (MB): peak = 827.000 ; gain = 439.781
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -462,7 +467,7 @@ WARNING: [Synth 8-3331] design Bidirectional_Transmitter_ps7_0_axi_periph_0 has 
 WARNING: [Synth 8-3331] design Bidirectional_Transmitter_ps7_0_axi_periph_0 has unconnected port M02_ACLK
 WARNING: [Synth 8-3331] design Bidirectional_Transmitter_ps7_0_axi_periph_0 has unconnected port M02_ARESETN
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:16 . Memory (MB): peak = 824.793 ; gain = 437.652
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:35 . Memory (MB): peak = 827.000 ; gain = 439.781
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -476,13 +481,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'Bidirectional_Transmitter_i/processing_system7_0/FCLK_CLK0' to pin 'Bidirectional_Transmitter_i/processing_system7_0/bbstub_FCLK_CLK0/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:26 . Memory (MB): peak = 862.703 ; gain = 475.562
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:48 . Memory (MB): peak = 863.129 ; gain = 475.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:26 . Memory (MB): peak = 862.926 ; gain = 475.785
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:48 . Memory (MB): peak = 863.277 ; gain = 476.059
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -494,7 +499,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:26 . Memory (MB): peak = 863.438 ; gain = 476.297
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:48 . Memory (MB): peak = 863.789 ; gain = 476.570
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -518,7 +523,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:27 . Memory (MB): peak = 864.191 ; gain = 477.051
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:49 . Memory (MB): peak = 864.352 ; gain = 477.133
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -531,7 +536,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:27 . Memory (MB): peak = 864.191 ; gain = 477.051
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:49 . Memory (MB): peak = 864.352 ; gain = 477.133
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -543,25 +548,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:27 . Memory (MB): peak = 864.191 ; gain = 477.051
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:49 . Memory (MB): peak = 864.352 ; gain = 477.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:27 . Memory (MB): peak = 864.191 ; gain = 477.051
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:49 . Memory (MB): peak = 864.352 ; gain = 477.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:27 . Memory (MB): peak = 864.191 ; gain = 477.051
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:49 . Memory (MB): peak = 864.352 ; gain = 477.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:27 . Memory (MB): peak = 864.191 ; gain = 477.051
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:49 . Memory (MB): peak = 864.352 ; gain = 477.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -577,10 +582,11 @@ Report BlackBoxes:
 |4     |Bidirectional_Transmitter_UART_Transmitter_0_0   |         1|
 |5     |Bidirectional_Transmitter_axi_gpio_0_0           |         1|
 |6     |Bidirectional_Transmitter_gpio_parse_0_0         |         1|
-|7     |Bidirectional_Transmitter_processing_system7_0_0 |         1|
-|8     |Bidirectional_Transmitter_rst_ps7_0_50M_0        |         1|
-|9     |Bidirectional_Transmitter_xadc_wiz_0_0           |         1|
-|10    |Bidirectional_Transmitter_xlconcat_0_0           |         1|
+|7     |Bidirectional_Transmitter_positioning_clk_0_0    |         1|
+|8     |Bidirectional_Transmitter_processing_system7_0_0 |         1|
+|9     |Bidirectional_Transmitter_rst_ps7_0_50M_0        |         1|
+|10    |Bidirectional_Transmitter_xadc_wiz_0_0           |         1|
+|11    |Bidirectional_Transmitter_xlconcat_0_0           |         1|
 +------+-------------------------------------------------+----------+
 
 Report Cell Usage: 
@@ -592,30 +598,31 @@ Report Cell Usage:
 |3     |Bidirectional_Transmitter_auto_pc_0              |     1|
 |4     |Bidirectional_Transmitter_axi_gpio_0_0           |     1|
 |5     |Bidirectional_Transmitter_gpio_parse_0_0         |     1|
-|6     |Bidirectional_Transmitter_processing_system7_0_0 |     1|
-|7     |Bidirectional_Transmitter_rst_ps7_0_50M_0        |     1|
-|8     |Bidirectional_Transmitter_xadc_wiz_0_0           |     1|
-|9     |Bidirectional_Transmitter_xbar_0                 |     1|
-|10    |Bidirectional_Transmitter_xlconcat_0_0           |     1|
-|11    |IBUF                                             |    20|
-|12    |OBUF                                             |     5|
+|6     |Bidirectional_Transmitter_positioning_clk_0_0    |     1|
+|7     |Bidirectional_Transmitter_processing_system7_0_0 |     1|
+|8     |Bidirectional_Transmitter_rst_ps7_0_50M_0        |     1|
+|9     |Bidirectional_Transmitter_xadc_wiz_0_0           |     1|
+|10    |Bidirectional_Transmitter_xbar_0                 |     1|
+|11    |Bidirectional_Transmitter_xlconcat_0_0           |     1|
+|12    |IBUF                                             |    20|
+|13    |OBUF                                             |     6|
 +------+-------------------------------------------------+------+
 
 Report Instance Areas: 
 +------+------------------------------+---------------------------------------------+------+
 |      |Instance                      |Module                                       |Cells |
 +------+------------------------------+---------------------------------------------+------+
-|1     |top                           |                                             |   902|
-|2     |  Bidirectional_Transmitter_i |Bidirectional_Transmitter                    |   877|
+|1     |top                           |                                             |   937|
+|2     |  Bidirectional_Transmitter_i |Bidirectional_Transmitter                    |   911|
 |3     |    ps7_0_axi_periph          |Bidirectional_Transmitter_ps7_0_axi_periph_0 |   551|
 |4     |      s00_couplers            |s00_couplers_imp_11NJTC7                     |   177|
 +------+------------------------------+---------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:27 . Memory (MB): peak = 864.191 ; gain = 477.051
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:49 . Memory (MB): peak = 864.352 ; gain = 477.133
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:05 ; elapsed = 00:00:19 . Memory (MB): peak = 864.230 ; gain = 195.453
-Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:28 . Memory (MB): peak = 864.230 ; gain = 477.090
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:35 . Memory (MB): peak = 864.410 ; gain = 195.250
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:49 . Memory (MB): peak = 864.410 ; gain = 477.191
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -625,11 +632,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-51 Infos, 24 Warnings, 0 Critical Warnings and 0 Errors encountered.
+53 Infos, 24 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:30 . Memory (MB): peak = 881.199 ; gain = 500.961
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:52 . Memory (MB): peak = 882.320 ; gain = 502.055
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Xilinx/projects/Bidirectional_Transmitter/Bidirectional_Transmitter.runs/synth_1/Bidirectional_Transmitter_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Bidirectional_Transmitter_wrapper_utilization_synth.rpt -pb Bidirectional_Transmitter_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 881.461 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Dec 17 15:30:04 2022...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 882.590 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Feb  9 11:42:05 2023...

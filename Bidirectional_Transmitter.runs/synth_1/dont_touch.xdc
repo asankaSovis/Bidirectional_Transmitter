@@ -36,6 +36,9 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Bidirectional_T
 # IP: bd/Bidirectional_Transmitter/ip/Bidirectional_Transmitter_xlconcat_0_0/Bidirectional_Transmitter_xlconcat_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Bidirectional_Transmitter_xlconcat_0_0 || ORIG_REF_NAME==Bidirectional_Transmitter_xlconcat_0_0} -quiet] -quiet
 
+# IP: bd/Bidirectional_Transmitter/ip/Bidirectional_Transmitter_positioning_clk_0_0/Bidirectional_Transmitter_positioning_clk_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Bidirectional_Transmitter_positioning_clk_0_0 || ORIG_REF_NAME==Bidirectional_Transmitter_positioning_clk_0_0} -quiet] -quiet
+
 # IP: bd/Bidirectional_Transmitter/ip/Bidirectional_Transmitter_auto_pc_0/Bidirectional_Transmitter_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Bidirectional_Transmitter_auto_pc_0 || ORIG_REF_NAME==Bidirectional_Transmitter_auto_pc_0} -quiet] -quiet
 

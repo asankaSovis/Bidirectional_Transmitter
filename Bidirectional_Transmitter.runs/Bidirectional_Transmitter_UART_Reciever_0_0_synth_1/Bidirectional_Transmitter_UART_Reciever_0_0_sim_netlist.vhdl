@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Sat Dec 17 15:29:15 2022
+-- Date        : Thu Feb  9 11:40:49 2023
 -- Host        : Akash-PC running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ Bidirectional_Transmitter_UART_Reciever_0_0_sim_netlist.vhdl
@@ -24,7 +24,7 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_bit_counter_rx is
     trigger_reg : out STD_LOGIC;
     SR : out STD_LOGIC_VECTOR ( 0 to 0 );
     red_LED : out STD_LOGIC;
-    green_LED : out STD_LOGIC;
+    recieving : out STD_LOGIC;
     trigger_reg_0 : out STD_LOGIC;
     \data_reg[7]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     end_rx_reg_2 : out STD_LOGIC;
@@ -51,7 +51,7 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_bit_counter_
   attribute SOFT_HLUTNM of \bit_ID[3]_i_2\ : label is "soft_lutpair15";
   attribute SOFT_HLUTNM of \data[7]_i_1\ : label is "soft_lutpair15";
   attribute SOFT_HLUTNM of enable_i_1 : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of green_LED_INST_0 : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of recieving_INST_0 : label is "soft_lutpair13";
   attribute SOFT_HLUTNM of red_LED_INST_0 : label is "soft_lutpair14";
   attribute SOFT_HLUTNM of \trigger_counter[8]_i_2\ : label is "soft_lutpair13";
 begin
@@ -195,7 +195,7 @@ end_rx_i_1: unisim.vcomponents.LUT6
       I5 => end_rx_reg_3,
       O => end_rx_reg_2
     );
-green_LED_INST_0: unisim.vcomponents.LUT4
+recieving_INST_0: unisim.vcomponents.LUT4
     generic map(
       INIT => X"0001"
     )
@@ -204,7 +204,7 @@ green_LED_INST_0: unisim.vcomponents.LUT4
       I1 => \^end_rx_reg\,
       I2 => \^end_rx_reg_1\,
       I3 => \^trigger_reg\,
-      O => green_LED
+      O => recieving
     );
 red_LED_INST_0: unisim.vcomponents.LUT5
     generic map(
@@ -1686,7 +1686,7 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_UART_Reciever is
   port (
     rx_axgpio : out STD_LOGIC_VECTOR ( 8 downto 0 );
     red_LED : out STD_LOGIC;
-    green_LED : out STD_LOGIC;
+    recieving : out STD_LOGIC;
     din : in STD_LOGIC;
     int_clk : in STD_LOGIC
   );
@@ -1727,7 +1727,7 @@ module2: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_bit_counter_rx
       end_rx_reg_1 => module2_n_4,
       end_rx_reg_2 => module2_n_11,
       end_rx_reg_3 => module5_n_1,
-      green_LED => green_LED,
+      recieving => recieving,
       red_LED => red_LED,
       rx_clk => rx_clk,
       trigger_reg => module2_n_5,
@@ -1786,7 +1786,8 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
     din : in STD_LOGIC;
     rx_axgpio : out STD_LOGIC_VECTOR ( 8 downto 0 );
     green_LED : out STD_LOGIC;
-    red_LED : out STD_LOGIC
+    red_LED : out STD_LOGIC;
+    recieving : out STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is true;
@@ -1801,16 +1802,19 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
 end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix;
 
 architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
+  signal \^recieving\ : STD_LOGIC;
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of int_clk : signal is "xilinx.com:signal:clock:1.0 int_clk CLK";
   attribute X_INTERFACE_PARAMETER : string;
   attribute X_INTERFACE_PARAMETER of int_clk : signal is "XIL_INTERFACENAME int_clk, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN Bidirectional_Transmitter_processing_system7_0_0_FCLK_CLK0";
 begin
+  green_LED <= \^recieving\;
+  recieving <= \^recieving\;
 inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_UART_Reciever
      port map (
       din => din,
-      green_LED => green_LED,
       int_clk => int_clk,
+      recieving => \^recieving\,
       red_LED => red_LED,
       rx_axgpio(8 downto 0) => rx_axgpio(8 downto 0)
     );

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Sat Dec 17 15:31:42 2022
+| Date             : Thu Feb  9 11:43:41 2023
 | Host             : Akash-PC running 64-bit major release  (build 9200)
 | Command          : report_power -file Bidirectional_Transmitter_wrapper_power_routed.rpt -pb Bidirectional_Transmitter_wrapper_power_summary_routed.pb -rpx Bidirectional_Transmitter_wrapper_power_routed.rpx
 | Design           : Bidirectional_Transmitter_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.378        |
+| Total On-Chip Power (W)  | 1.377        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.260        |
+| Dynamic (W)              | 1.259        |
 | Device Static (W)        | 0.118        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 69.1         |
@@ -53,18 +53,18 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.003 |        3 |       --- |             --- |
-| Slice Logic             |     0.001 |     2750 |       --- |             --- |
-|   LUT as Logic          |     0.001 |      837 |     14400 |            5.81 |
-|   Register              |    <0.001 |     1328 |     28800 |            4.61 |
+| Slice Logic             |     0.001 |     2969 |       --- |             --- |
+|   LUT as Logic          |    <0.001 |      883 |     14400 |            6.13 |
+|   Register              |    <0.001 |     1489 |     28800 |            5.17 |
 |   CARRY4                |    <0.001 |       32 |      4400 |            0.73 |
 |   LUT as Shift Register |    <0.001 |       62 |      6000 |            1.03 |
-|   Others                |     0.000 |      237 |       --- |             --- |
-| Signals                 |     0.001 |     2126 |       --- |             --- |
-| I/O                     |     0.002 |       23 |       100 |           23.00 |
+|   Others                |     0.000 |      239 |       --- |             --- |
+| Signals                 |     0.001 |     2312 |       --- |             --- |
+| I/O                     |     0.001 |       24 |       100 |           24.00 |
 | XADC                    |    <0.001 |        1 |       --- |             --- |
 | PS7                     |     1.251 |        1 |       --- |             --- |
 | Static Power            |     0.118 |          |           |                 |
-| Total                   |     1.378 |          |           |                 |
+| Total                   |     1.377 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Vccint    |       1.000 |     0.012 |       0.006 |      0.006 |
 | Vccaux    |       1.800 |     0.008 |       0.000 |      0.008 |
-| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
+| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -150,7 +150,7 @@ Table of Contents
 +--------------------------------------------------+-----------+
 | Name                                             | Power (W) |
 +--------------------------------------------------+-----------+
-| Bidirectional_Transmitter_wrapper                |     1.260 |
+| Bidirectional_Transmitter_wrapper                |     1.259 |
 |   Bidirectional_Transmitter_i                    |     1.258 |
 |     UART_Reciever_0                              |    <0.001 |
 |       inst                                       |    <0.001 |
@@ -173,6 +173,8 @@ Table of Contents
 |           Dual.INPUT_DOUBLE_REGS4                |    <0.001 |
 |           Dual.INPUT_DOUBLE_REGS5                |    <0.001 |
 |     gpio_parse_0                                 |     0.000 |
+|     positioning_clk_0                            |    <0.001 |
+|       inst                                       |    <0.001 |
 |     processing_system7_0                         |     1.251 |
 |       inst                                       |     1.251 |
 |     ps7_0_axi_periph                             |     0.003 |

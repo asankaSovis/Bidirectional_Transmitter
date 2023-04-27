@@ -4,6 +4,8 @@
 
 ---
 
+*💸 Please consider [donating](https://www.paypal.com/donate/?hosted_button_id=4EWXTWQ9FUFLA) on Paypal to keep this project alive.*
+
 ## 📡 Project Introduction
 
 This project was intended to develop a bidirectional transmitter and reciever device that uses [Visible Light Communication (VLC)](https://en.wikipedia.org/wiki/Visible_light_communication) technology to transmit and recieve data from one device to another. In its basic form, data is transmitted as pulses of light where on means bit 1 and off means bit 0. This can be paired with more complicated transmitting techniques to build much more accurate and sophisticated data transmission. Programming is done using IP blocks with Verilog as the hardware description language and C/C++ to program the internal Zynq Processor system to communicate with the computer to retrieve and provide the data to be transmitted and recieved. The data to be transmitted and is recieved can be exchanged using the [Bitstreamer](https://github.com/asankaSovis/BitStreamer) software.

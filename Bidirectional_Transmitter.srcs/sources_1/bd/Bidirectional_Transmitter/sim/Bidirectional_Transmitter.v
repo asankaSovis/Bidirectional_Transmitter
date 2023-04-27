@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Sat Dec 17 15:28:15 2022
+//Date        : Thu Feb  9 11:39:46 2023
 //Host        : Akash-PC running 64-bit major release  (build 9200)
 //Command     : generate_target Bidirectional_Transmitter.bd
 //Design      : Bidirectional_Transmitter
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "Bidirectional_Transmitter,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Bidirectional_Transmitter,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=15,numReposBlks=10,numNonXlnxBlks=0,numHierBlks=5,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_board_cnt=1,da_clkrst_cnt=2,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "Bidirectional_Transmitter.hwdef" *) 
+(* CORE_GENERATION_INFO = "Bidirectional_Transmitter,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Bidirectional_Transmitter,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=16,numReposBlks=11,numNonXlnxBlks=0,numHierBlks=5,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=4,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_board_cnt=1,da_clkrst_cnt=2,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "Bidirectional_Transmitter.hwdef" *) 
 module Bidirectional_Transmitter
    (DDR_addr,
     DDR_ba,
@@ -52,6 +52,7 @@ module Bidirectional_Transmitter
     Vaux9_v_p,
     Vp_Vn_v_n,
     Vp_Vn_v_p,
+    analog_clk,
     dout,
     rx_green_LED,
     rx_red_LED,
@@ -98,6 +99,7 @@ module Bidirectional_Transmitter
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 Vaux9 V_P" *) input Vaux9_v_p;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 Vp_Vn V_N" *) input Vp_Vn_v_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 Vp_Vn V_P" *) input Vp_Vn_v_p;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.ANALOG_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.ANALOG_CLK, CLK_DOMAIN Bidirectional_Transmitter_positioning_clk_0_0_out_clk, FREQ_HZ 100000000, PHASE 0.000" *) output analog_clk;
   output dout;
   output rx_green_LED;
   output rx_red_LED;
@@ -106,6 +108,7 @@ module Bidirectional_Transmitter
 
   wire [8:0]UART_Reciever_0_axgpio;
   wire UART_Reciever_0_green_LED;
+  wire UART_Reciever_0_recieving;
   wire UART_Reciever_0_red_LED;
   wire UART_Transmitter_0_dout;
   wire UART_Transmitter_0_green_LED;
@@ -130,10 +133,12 @@ module Bidirectional_Transmitter
   wire Vaux9_0_1_V_P;
   wire Vp_Vn_0_1_V_N;
   wire Vp_Vn_0_1_V_P;
-  wire [9:0]axi_gpio_0_gpio_io_o;
+  wire [25:0]axi_gpio_0_gpio_io_o;
   wire axi_gpio_0_ip2intc_irpt;
   wire gpio_parse_0_din_gpio;
+  wire [15:0]gpio_parse_0_intensity_gpio;
   wire [8:0]gpio_parse_0_tx_gpio;
+  wire positioning_clk_0_out_clk;
   wire [14:0]processing_system7_0_DDR_ADDR;
   wire [2:0]processing_system7_0_DDR_BA;
   wire processing_system7_0_DDR_CAS_N;
@@ -254,6 +259,7 @@ module Bidirectional_Transmitter
   assign Vaux9_0_1_V_P = Vaux9_v_p;
   assign Vp_Vn_0_1_V_N = Vp_Vn_v_n;
   assign Vp_Vn_0_1_V_P = Vp_Vn_v_p;
+  assign analog_clk = positioning_clk_0_out_clk;
   assign dout = UART_Transmitter_0_dout;
   assign rx_green_LED = UART_Reciever_0_green_LED;
   assign rx_red_LED = UART_Reciever_0_red_LED;
@@ -263,6 +269,7 @@ module Bidirectional_Transmitter
        (.din(gpio_parse_0_din_gpio),
         .green_LED(UART_Reciever_0_green_LED),
         .int_clk(processing_system7_0_FCLK_CLK0),
+        .recieving(UART_Reciever_0_recieving),
         .red_LED(UART_Reciever_0_red_LED),
         .rx_axgpio(UART_Reciever_0_axgpio));
   Bidirectional_Transmitter_UART_Transmitter_0_0 UART_Transmitter_0
@@ -297,7 +304,12 @@ module Bidirectional_Transmitter
   Bidirectional_Transmitter_gpio_parse_0_0 gpio_parse_0
        (.din_gpio(gpio_parse_0_din_gpio),
         .gpio_in(axi_gpio_0_gpio_io_o),
+        .intensity_gpio(gpio_parse_0_intensity_gpio),
         .tx_gpio(gpio_parse_0_tx_gpio));
+  Bidirectional_Transmitter_positioning_clk_0_0 positioning_clk_0
+       (.analog_reading(gpio_parse_0_intensity_gpio),
+        .data_rx(UART_Reciever_0_recieving),
+        .out_clk(positioning_clk_0_out_clk));
   Bidirectional_Transmitter_processing_system7_0_0 processing_system7_0
        (.DDR_Addr(DDR_addr[14:0]),
         .DDR_BankAddr(DDR_ba[2:0]),

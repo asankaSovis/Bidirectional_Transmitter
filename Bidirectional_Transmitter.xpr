@@ -88,26 +88,33 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/new/positioning_clk.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/bd/Bidirectional_Transmitter/Bidirectional_Transmitter.bd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="Bidirectional_Transmitter.bd" FileRelPathName="ip/Bidirectional_Transmitter_xadc_wiz_0_0/Bidirectional_Transmitter_xadc_wiz_0_0.xci">
-          <Proxy FileSetName="Bidirectional_Transmitter_xadc_wiz_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Bidirectional_Transmitter.bd" FileRelPathName="ip/Bidirectional_Transmitter_xbar_0/Bidirectional_Transmitter_xbar_0.xci">
-          <Proxy FileSetName="Bidirectional_Transmitter_xbar_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="Bidirectional_Transmitter.bd" FileRelPathName="ip/Bidirectional_Transmitter_rst_ps7_0_50M_0/Bidirectional_Transmitter_rst_ps7_0_50M_0.xci">
           <Proxy FileSetName="Bidirectional_Transmitter_rst_ps7_0_50M_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="Bidirectional_Transmitter.bd" FileRelPathName="ip/Bidirectional_Transmitter_UART_Transmitter_0_0/Bidirectional_Transmitter_UART_Transmitter_0_0.xci">
           <Proxy FileSetName="Bidirectional_Transmitter_UART_Transmitter_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Bidirectional_Transmitter.bd" FileRelPathName="ip/Bidirectional_Transmitter_gpio_parse_0_0/Bidirectional_Transmitter_gpio_parse_0_0.xci">
-          <Proxy FileSetName="Bidirectional_Transmitter_gpio_parse_0_0"/>
+        <CompFileExtendedInfo CompFileName="Bidirectional_Transmitter.bd" FileRelPathName="ip/Bidirectional_Transmitter_xadc_wiz_0_0/Bidirectional_Transmitter_xadc_wiz_0_0.xci">
+          <Proxy FileSetName="Bidirectional_Transmitter_xadc_wiz_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Bidirectional_Transmitter.bd" FileRelPathName="ip/Bidirectional_Transmitter_xbar_0/Bidirectional_Transmitter_xbar_0.xci">
+          <Proxy FileSetName="Bidirectional_Transmitter_xbar_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Bidirectional_Transmitter.bd" FileRelPathName="ip/Bidirectional_Transmitter_xlconcat_0_0/Bidirectional_Transmitter_xlconcat_0_0.xci">
+          <Proxy FileSetName="Bidirectional_Transmitter_xlconcat_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="Bidirectional_Transmitter.bd" FileRelPathName="ip/Bidirectional_Transmitter_axi_gpio_0_0/Bidirectional_Transmitter_axi_gpio_0_0.xci">
           <Proxy FileSetName="Bidirectional_Transmitter_axi_gpio_0_0"/>
@@ -115,8 +122,11 @@
         <CompFileExtendedInfo CompFileName="Bidirectional_Transmitter.bd" FileRelPathName="ip/Bidirectional_Transmitter_UART_Reciever_0_0/Bidirectional_Transmitter_UART_Reciever_0_0.xci">
           <Proxy FileSetName="Bidirectional_Transmitter_UART_Reciever_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Bidirectional_Transmitter.bd" FileRelPathName="ip/Bidirectional_Transmitter_xlconcat_0_0/Bidirectional_Transmitter_xlconcat_0_0.xci">
-          <Proxy FileSetName="Bidirectional_Transmitter_xlconcat_0_0"/>
+        <CompFileExtendedInfo CompFileName="Bidirectional_Transmitter.bd" FileRelPathName="ip/Bidirectional_Transmitter_gpio_parse_0_0/Bidirectional_Transmitter_gpio_parse_0_0.xci">
+          <Proxy FileSetName="Bidirectional_Transmitter_gpio_parse_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Bidirectional_Transmitter.bd" FileRelPathName="ip/Bidirectional_Transmitter_positioning_clk_0_0/Bidirectional_Transmitter_positioning_clk_0_0.xci">
+          <Proxy FileSetName="Bidirectional_Transmitter_positioning_clk_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/Bidirectional_Transmitter/hdl/Bidirectional_Transmitter_wrapper.v">
@@ -182,15 +192,21 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
+    <FileSet Name="Bidirectional_Transmitter_xlconcat_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Bidirectional_Transmitter_xlconcat_0_0">
+      <Config>
+        <Option Name="TopModule" Val="Bidirectional_Transmitter_xlconcat_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
     <FileSet Name="Bidirectional_Transmitter_gpio_parse_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Bidirectional_Transmitter_gpio_parse_0_0">
       <Config>
         <Option Name="TopModule" Val="Bidirectional_Transmitter_gpio_parse_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="Bidirectional_Transmitter_xlconcat_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Bidirectional_Transmitter_xlconcat_0_0">
+    <FileSet Name="Bidirectional_Transmitter_positioning_clk_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Bidirectional_Transmitter_positioning_clk_0_0">
       <Config>
-        <Option Name="TopModule" Val="Bidirectional_Transmitter_xlconcat_0_0"/>
+        <Option Name="TopModule" Val="Bidirectional_Transmitter_positioning_clk_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -271,7 +287,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="Bidirectional_Transmitter_gpio_parse_0_0_synth_1" Type="Ft3:Synth" SrcSet="Bidirectional_Transmitter_gpio_parse_0_0" Part="xc7z007sclg400-1" ConstrsSet="Bidirectional_Transmitter_gpio_parse_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Bidirectional_Transmitter_gpio_parse_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="Bidirectional_Transmitter_xlconcat_0_0_synth_1" Type="Ft3:Synth" SrcSet="Bidirectional_Transmitter_xlconcat_0_0" Part="xc7z007sclg400-1" ConstrsSet="Bidirectional_Transmitter_xlconcat_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Bidirectional_Transmitter_xlconcat_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
@@ -280,9 +296,22 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="Bidirectional_Transmitter_xlconcat_0_0_synth_1" Type="Ft3:Synth" SrcSet="Bidirectional_Transmitter_xlconcat_0_0" Part="xc7z007sclg400-1" ConstrsSet="Bidirectional_Transmitter_xlconcat_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Bidirectional_Transmitter_xlconcat_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="Bidirectional_Transmitter_gpio_parse_0_0_synth_1" Type="Ft3:Synth" SrcSet="Bidirectional_Transmitter_gpio_parse_0_0" Part="xc7z007sclg400-1" ConstrsSet="Bidirectional_Transmitter_gpio_parse_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Bidirectional_Transmitter_gpio_parse_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="Bidirectional_Transmitter_positioning_clk_0_0_synth_1" Type="Ft3:Synth" SrcSet="Bidirectional_Transmitter_positioning_clk_0_0" Part="xc7z007sclg400-1" ConstrsSet="Bidirectional_Transmitter_positioning_clk_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Bidirectional_Transmitter_positioning_clk_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -392,7 +421,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="Bidirectional_Transmitter_gpio_parse_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z007sclg400-1" ConstrsSet="Bidirectional_Transmitter_gpio_parse_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="Bidirectional_Transmitter_gpio_parse_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="Bidirectional_Transmitter_xlconcat_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z007sclg400-1" ConstrsSet="Bidirectional_Transmitter_xlconcat_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="Bidirectional_Transmitter_xlconcat_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
@@ -408,9 +437,29 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="Bidirectional_Transmitter_xlconcat_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z007sclg400-1" ConstrsSet="Bidirectional_Transmitter_xlconcat_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="Bidirectional_Transmitter_xlconcat_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="Bidirectional_Transmitter_gpio_parse_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z007sclg400-1" ConstrsSet="Bidirectional_Transmitter_gpio_parse_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="Bidirectional_Transmitter_gpio_parse_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="Bidirectional_Transmitter_positioning_clk_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z007sclg400-1" ConstrsSet="Bidirectional_Transmitter_positioning_clk_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="Bidirectional_Transmitter_positioning_clk_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
